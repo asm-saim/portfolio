@@ -13,7 +13,7 @@ const Navbar = () => {
         <li className="m-3 font-semibold text-base">Home</li>
       </NavLink>
       <NavLink
-        to="/apps"
+        to="/about"
         className={({ isActive }) => (isActive ? "text-blue-400" : "")}
       >
         <li className="m-3 font-semibold text-base">About</li>
@@ -34,7 +34,7 @@ const Navbar = () => {
   );
   return (
     <div className="">
-      <div className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-0">
+      <div className="navbar max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -76,7 +76,7 @@ const Navbar = () => {
           <a
             href="mailto:saim777m@gmail.com?subject=Let's Connect"
             aria-label="Send me an email"
-            className="btn btn-sm sm:btn-md border-none text-sm sm:text-base rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] hover:brightness-110 transition"
+            className="btn btn-sm sm:btn-md border-none text-sm sm:text-base rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
           >
             <IoMail />
             <span className="hidden sm:inline">Get In Touch</span>
