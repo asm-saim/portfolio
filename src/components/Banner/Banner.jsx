@@ -26,7 +26,7 @@ const Banner = () => {
             href="https://github.com/asm-saim"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:scale-110" 
+            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]" 
           >
             <FaGithub className="text-lg" />
             GitHub
@@ -36,7 +36,7 @@ const Banner = () => {
             href="https://www.linkedin.com/in/asmsaim/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] hover:scale-110" 
+            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]" 
           >
             <FaLinkedin className="text-lg" />
             LinkedIn

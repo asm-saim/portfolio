@@ -37,9 +37,8 @@ const Footer = () => {
       </div>
 
       <aside>
-        <p className="text-base sm:text-lg font-semibold">A S M Saim.</p>
-        <p className="text-xs sm:text-sm">
-          Copyright © {new Date().getFullYear()} - All rights reserved.
+        <p className="text-sm sm:text-sm font-medium">
+          © {new Date().getFullYear()} A S M Saim. All rights reserved.
         </p>
       </aside>
     </footer>
