@@ -10,23 +10,26 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <Error></Error>,
     children: [
       {
         path: "/",
         Component: Home,
       },
       {
-        path: "/about",
+        path: "about",
         Component: About,
       },
       {
-        path: "/projects",
+        path: "projects",
         Component: Projects,
       },
       {
-        path: "/resume",
+        path: "resume",
         Component: Resume,
+      },
+      {
+        path: "*",
+        Component: Error,
       },
     ],
   },

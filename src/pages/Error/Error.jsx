@@ -13,11 +13,11 @@ const Error = () => {
 
       <div className="flex justify-center items-center min-h-screen">
         <div className="text-center space-y-4">
-          <img className="mx-auto" src={errorImg} alt="" />
+          <img className="mx-auto w-90" src={errorImg} alt="" />
           <h1 className="text-5xl font-bold">Oops! Page Not Found.</h1>
           <Link
             to="/"
-            className="mt-8 btn btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] "
+            className="mt-4 btn btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.7)] "
           >
             Back to Home
           </Link>
