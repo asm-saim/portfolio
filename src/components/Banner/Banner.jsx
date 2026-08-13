@@ -51,7 +51,7 @@ const Banner = () => {
         <img
           src={bannerImg}
           alt="Banner"
-          className="relative z-10 mt-10 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none lg:h-[81vh] object-contain"
+          className="relative z-10 mt-11 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none lg:h-[81vh] object-contain"
         />
       </div>
     </div>
