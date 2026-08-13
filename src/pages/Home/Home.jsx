@@ -5,6 +5,7 @@ import States from "../../components/States/States";
 const Home = () => {
   return (
     <div>
+      <title>Saim-Home</title>
       <div className="max-w-7xl mx-auto">
         <Banner></Banner>
       </div>

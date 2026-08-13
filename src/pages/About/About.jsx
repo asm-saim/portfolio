@@ -3,6 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <section className="max-w-7xl mx-auto py-16 px-6">
+      <title>About Me</title>
       {/* Section label */}
       <span className="block text-sm font-medium tracking-widest text-blue-400 uppercase mb-3">
         About Me
