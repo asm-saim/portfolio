@@ -9,7 +9,7 @@ const Home = () => {
       <PageMeta
         title="A S M Saim | React Developer"
         description="A S M Saim is a React Developer building responsive, user-friendly, and modern web applications."
-      ></PageMeta>
+      />
       <div className="max-w-7xl mx-auto">
         <Banner></Banner>
       </div>

@@ -19,13 +19,13 @@ const Navbar = () => {
         <li className="m-3 font-semibold text-base">About</li>
       </NavLink>
       <NavLink
-        to="/installation"
+        to="/projects"
         className={({ isActive }) => (isActive ? "text-blue-400" : "")}
       >
         <li className="m-3 font-semibold text-base">Projects</li>
       </NavLink>
       <NavLink
-        to="/installation"
+        to="/resume"
         className={({ isActive }) => (isActive ? "text-blue-400" : "")}
       >
         <li className="m-3 font-semibold text-base">Resume</li>
