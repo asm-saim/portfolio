@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
-import logo from "../../assets/logo.png"
+import logo from "../../assets/logo.png";
 import { IoMail } from "react-icons/io5";
 
 const Navbar = () => {
@@ -65,7 +65,11 @@ const Navbar = () => {
             to="/"
             className="flex items-center space-x-1.5 cursor-pointer px-0"
           >
-            <img src={logo} className="w-7 sm:w-8 mr-0" alt="Simplico logo" />
+            <img
+              src={logo}
+              className="w-7 sm:w-8 mr-0.5"
+              alt="portfolio logo"
+            />
             <span className="text-lg sm:text-3xl font-bold ">aim</span>
           </Link>
         </div>
