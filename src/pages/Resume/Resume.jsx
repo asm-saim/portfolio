@@ -16,14 +16,14 @@ const Resume = () => {
         description="View the resume of A S M Saim, a React Developer skilled in React, JavaScript, Tailwind CSS, and modern web technologies."
       />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6">
 
         {/* Header */}
         <div className="text-center mb-10">
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-white">
-            My Resume
-          </h1>
+        <span className="block text-3xl text-center font-bold tracking-widest text-blue-400 uppercase mb-1">
+          My Resume
+        </span>
 
           <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7">
             A quick overview of my technical skills, experience, education,
@@ -32,7 +32,7 @@ const Resume = () => {
         </div>
 
         {/* Resume Card */}
-        <div className="rounded-xl border border-blue-400/20 bg-gradient-to-br from-[#000000] via-[#061A3A] to-[#0B2F5B] p-6 sm:p-8">
+        <div className="rounded-xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/20 to-[#3B82F6]/10 p-6 sm:p-8">
 
           {/* Intro */}
           <div className="max-w-3xl">
