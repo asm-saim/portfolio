@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-4 py-2 text-sm font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+              className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-4 py-2 text-sm font-medium transition-all duration-300  hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
             >
               <FaExternalLinkAlt className="text-xs" />
               Live Demo
