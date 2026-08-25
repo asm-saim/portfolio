@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Simplico",
+    "description": "A modern and responsive React application that showcases popular mobile applications in an App Store-style interface.",
+    "features": [
+      "Search and explore popular mobile applications.",
+      "View detailed information for individual applications.",
+      "Install and manage applications with interactive charts."
+    ],
+    "technologies": ["React", "JavaScript", "React Router", "Tailwind CSS", "Recharts"],
+    "image": "/projects-img/simplico-home.png",
+    "liveUrl": "https://simplico-v1.netlify.app/",
+    "githubUrl": "https://github.com/asm-saim/simplico"
+  },
+  {
+    "id": 2,
+    "name": "Customer Support Zone",
+    "description": "A responsive React application for managing customer support tickets through an interactive workflow.",
+    "features": [
+      "Manage and assign customer support tickets.",
+      "Track in-progress and resolved tickets in real time.",
+      "Complete tasks with duplicate-assignment prevention."
+    ],
+    "technologies": ["React", "JavaScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
+    "image": "/projects-img/customer-homepage.png",
+    "liveUrl": "https://project-customer-support-zone.netlify.app/",
+    "githubUrl": "https://github.com/asm-saim/customer-support-zone"
+  }
+]
