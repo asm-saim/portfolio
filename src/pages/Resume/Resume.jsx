@@ -25,7 +25,7 @@ const Resume = () => {
           My Resume
         </span>
 
-          <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7">
+          <p className="mt-1 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7 italic">
             A quick overview of my technical skills, experience, education,
             and development journey.
           </p>
