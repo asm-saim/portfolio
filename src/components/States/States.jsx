@@ -1,63 +1,61 @@
-import React from 'react';
+import React from "react";
 
-const States = () => {
-    return (
-        <section className="bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] py-16 md:py-20">
-            <div className="max-w-7xl mx-auto px-4">
+const Stats = () => {
+  const stats = [
+    {
+      value: "5+",
+      title: "Projects",
+      description: "Projects built",
+    },
+    {
+      value: "10+",
+      title: "Technologies",
+      description: "Tools and technologies",
+    },
+    {
+      value: "20+",
+      title: "GitHub Repos",
+      description: "Repositories",
+    },
+    {
+      value: "B.Sc.",
+      title: "CSE Graduate",
+      description: "Computer Science & Engineering",
+    },
+  ];
 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-                    Trusted by Millions, Built for You
-                </h1>
+  return (
+    <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+      {/* Section Header */}
+      <div className="text-center mb-8">
+        <span className="block text-sm font-medium tracking-widest text-blue-400 uppercase mb-2">At a Glance</span>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-white">A Few Highlights</h2>
 
-                    <div className="text-center space-y-3">
-                        <p className="text-gray-200 text-sm md:text-base">
-                            Total Downloads
-                        </p>
+        <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7">
+          A quick overview of my development journey, projects, and technical background.
+        </p>
+      </div>
 
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                            29.6M
-                        </h2>
+      {/* Stats */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {stats.map((stat, index) => (
+          <div
+            key={index}
+            className="group rounded-xl border border-white/10 bg-gradient-to-br from-[#0B2F5B]/20 to-[#3B82F6]/10 p-5 sm:p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/30 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
+          >
+            <h3 className="text-2xl sm:text-3xl font-bold text-blue-400 transition-colors duration-300 group-hover:text-blue-300">
+              {stat.value}
+            </h3>
 
-                        <p className="text-sm md:text-base text-gray-200">
-                            21% more than last month
-                        </p>
-                    </div>
+            <p className="mt-2 text-sm sm:text-base font-semibold text-white">{stat.title}</p>
 
-                    <div className="text-center space-y-3">
-                        <p className="text-gray-200 text-sm md:text-base">
-                            Total Reviews
-                        </p>
-
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                            906K
-                        </h2>
-
-                        <p className="text-sm md:text-base text-gray-200">
-                            46% more than last month
-                        </p>
-                    </div>
-
-                    <div className="text-center space-y-3 sm:col-span-2 lg:col-span-1">
-                        <p className="text-gray-200 text-sm md:text-base">
-                            Active Apps
-                        </p>
-
-                        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-                            132+
-                        </h2>
-
-                        <p className="text-sm md:text-base text-gray-200">
-                            31 more will launch
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-    );
+            <p className="mt-1 text-xs sm:text-sm text-gray-400">{stat.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 };
 
-export default States;
+export default Stats;
