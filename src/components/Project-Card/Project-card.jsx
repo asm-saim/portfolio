@@ -66,7 +66,7 @@ const ProjectCard = ({ project }) => {
         </div>
 
         {/* Project Image */}
-        <div className="relative h-[260px] md:h-full overflow-hidden">
+        <div className="relative min-h-[260px] md:h-full overflow-hidden">
           <img
             src={project.image}
             alt={`${project.name} project preview`}

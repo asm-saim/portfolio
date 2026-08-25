@@ -9,7 +9,7 @@
       "Install and manage applications with interactive charts."
     ],
     "technologies": ["React", "JavaScript", "React Router", "Tailwind CSS", "Recharts"],
-    "image": "/projects-img/simplico-home.png",
+    "image": "/projects-img/simplico.png",
     "liveUrl": "https://simplico-v1.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/simplico"
   },
