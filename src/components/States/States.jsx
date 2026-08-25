@@ -13,7 +13,7 @@ const Stats = () => {
       description: "Tools and technologies",
     },
     {
-      value: "120+",
+      value: "80+",
       title: "GitHub Repos",
       description: "Repositories",
     },
