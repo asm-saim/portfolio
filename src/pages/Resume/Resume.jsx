@@ -120,9 +120,9 @@ const Resume = () => {
           </div>
         </div>
 
+  
         {/* Bottom CTA */}
-        {/* Bottom CTA */}
-        <div className="mt-10 text-center">
+        <div className="my-14 pt-4 text-center">
           <h2 className="text-xl sm:text-2xl font-semibold text-white">Interested in working together?</h2>
 
           <p className="mt-2 text-sm text-gray-400">Feel free to get in touch with me.</p>
