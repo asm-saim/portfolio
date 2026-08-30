@@ -47,7 +47,7 @@ const TechnicalSkills = () => {
     },
 
     {
-      title: "Backend",
+      title: "Backend & Database",
       skills: [
         {
           name: "Node.js",
@@ -73,7 +73,7 @@ const TechnicalSkills = () => {
     },
 
     {
-      title: "Tools & Development",
+      title: "Tools & Engineering",
       skills: [
         {
           name: "Git",
@@ -87,12 +87,6 @@ const TechnicalSkills = () => {
           name: "AI-Assisted Coding",
           icon: null,
         },
-      ],
-    },
-
-    {
-      title: "Engineering",
-      skills: [
         {
           name: "AI Mindset & Engineering",
           icon: null,
@@ -116,7 +110,7 @@ const TechnicalSkills = () => {
       </div>
 
       {/* Skill Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skillCategories.map((category) => (
           <div
             key={category.title}
@@ -126,7 +120,7 @@ const TechnicalSkills = () => {
             <h3 className="text-sm font-medium tracking-widest text-blue-400 uppercase">{category.title}</h3>
 
             {/* Skills */}
-            <div className="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="mt-5 grid grid-cols-2 gap-3">
               {category.skills.map((skill) => (
                 <div
                   key={skill.name}
