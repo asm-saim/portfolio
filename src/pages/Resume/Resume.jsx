@@ -85,7 +85,7 @@ const Resume = () => {
           <div className="max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-semibold text-white">A S M Saim</h2>
 
-            <p className="mt-2 text-blue-400 font-medium">Full Stack Web Developer</p>
+            <p className="mt-2 text-blue-400 font-medium">Full Stack Developer</p>
 
             <p className="mt-4 text-sm sm:text-base text-gray-400 leading-7">
               I build responsive, user-friendly web applications using modern frontend and backend technologies. My
