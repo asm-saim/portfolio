@@ -2,6 +2,7 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import States from "../../components/States/States";
 import PageMeta from "../../components/PageMeta/PageMeta";
+import TechnicalSkills from "../../components/TechnicalSkills/TechnicalSkills";
 
 const Home = () => {
   return (
@@ -13,8 +14,11 @@ const Home = () => {
       <div className="max-w-7xl mx-auto">
         <Banner></Banner>
       </div>
-      <div className="">
+      <div>
         <States></States>
+      </div>
+      <div>
+        <TechnicalSkills></TechnicalSkills>
       </div>
     </div>
   );
