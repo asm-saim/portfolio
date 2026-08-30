@@ -23,7 +23,7 @@ const Projects = () => {
         </p>
 
         {/* Projects */}
-        <div className="space-y-8">
+        <div className="space-y-8 ">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

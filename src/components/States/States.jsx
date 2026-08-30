@@ -25,7 +25,7 @@ const Stats = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-[#0000002d] via-[#04142e48] to-[#04254b3a]">
+    <div className="bg-gradient-to-r from-transparent via-[#061A3A]/5 via-5% via-[#082B55]/20 via-70% to-[#0B2F5B]/60">
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {/* Section Header */}
         <div className="text-center mb-8">
