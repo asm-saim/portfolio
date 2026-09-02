@@ -8,17 +8,15 @@ const Banner = () => {
   return (
     <div className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center text-start">
       <div className="flex-1 ">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Hi, I'm Saim.
-        </h1>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Hi, I'm Saim.</h1>
         <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold leading-tight">
-          <span className="text-blue-400">React Developer</span>
+          <span className="text-blue-400">Full Stack Developer</span>
         </h2>
 
         <p className="mt-6 text-gray-300 italic max-w-3xl text-sm md:text-base leading-7">
-          I build fast, responsive, and user-friendly web applications with
-          clean, maintainable code. Currently focused on turning ideas into
-          seamless digital experiences.
+          I build responsive, user-friendly web applications using modern frontend and backend technologies. I focus on
+          clean code, scalable architecture, responsive interfaces, and practical solutions through continuous learning
+          and problem-solving.Currently focused on turning ideas into seamless digital experiences.
         </p>
 
         <div className="mt-8 flex justify-start flex-col sm:flex-row gap-6">
@@ -26,7 +24,7 @@ const Banner = () => {
             href="https://github.com/asm-saim"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]" 
+            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
           >
             <FaGithub className="text-lg" />
             GitHub
@@ -36,7 +34,7 @@ const Banner = () => {
             href="https://www.linkedin.com/in/asmsaim/"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]" 
+            className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
           >
             <FaLinkedin className="text-lg" />
             LinkedIn
