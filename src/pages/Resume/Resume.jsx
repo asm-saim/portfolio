@@ -54,8 +54,6 @@ const Resume = () => {
       skills: [
         { name: "Git", icon: <FaGitAlt /> },
         { name: "GitHub", icon: <FaGithub /> },
-        { name: "AI-Assisted Coding", icon: <RiRobot2Line /> },
-        { name: "AI Mindset & Engineering", icon: <RiBrainLine /> },
       ],
     },
   ];
@@ -88,9 +86,9 @@ const Resume = () => {
             <p className="mt-2 text-blue-400 font-medium">Full Stack Developer</p>
 
             <p className="mt-4 text-sm sm:text-base text-gray-400 leading-7">
-              I build responsive, user-friendly web applications using modern frontend and backend technologies. My
-              focus is on clean code, scalable architecture, responsive interfaces, and practical solutions through
-              continuous learning and problem solving.
+              I build responsive, user-friendly web applications using modern frontend and backend technologies. I focus
+              on clean code, scalable architecture, responsive interfaces, and practical solutions through continuous
+              learning and problem-solving.
             </p>
           </div>
 
@@ -121,7 +119,6 @@ const Resume = () => {
 
           {/* Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {/* Technical Skills */}
             {/* Technical Skills */}
             <div className="rounded-xl border border-white/10 bg-black/20 p-5">
               <h3 className="text-sm font-medium tracking-widest text-blue-400 uppercase">Technical Skills</h3>
