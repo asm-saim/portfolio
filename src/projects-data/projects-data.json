@@ -37,7 +37,7 @@
       "Toggle between available and selected players with instant notifications."
     ],
     "technologies": ["React", "JavaScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
-    "image": "/projects-img/champions-league.png",
+    "image": "/projects-img/dream-team.png",
     "liveUrl": "https://champions-league-twenty20.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/champions-league-twenty20"
   },
@@ -65,7 +65,7 @@
       "Track every call made in a dynamic, clearable history log."
     ],
     "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
-    "image": "/projects-img/emergency-services.png",
+    "image": "/projects-img/emergency-service-portal.png",
     "liveUrl": "https://asm-saim.github.io/emergency-services-portal/",
     "githubUrl": "https://github.com/asm-saim/emergency-services-portal"
   },
