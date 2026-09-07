@@ -22,7 +22,7 @@ const Banner = () => {
       <div className="flex-1 flex flex-col items-center lg:items-start">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Hi, I'm Saim.</h1>
 
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight mt-1">
+        <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-1">
           <span className="text-blue-400">Full Stack Developer</span>
         </h2>
 
@@ -31,7 +31,7 @@ const Banner = () => {
           seamless, user-friendly digital experiences.
         </p>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+        <div className="mt-8 flex flex-row gap-4 sm:gap-6 justify-center lg:justify-start w-full">
           {socialLinks.map(({ href, label, icon: Icon }) => (
             <a
               key={label}
