@@ -26,5 +26,61 @@
     "image": "/projects-img/customer-homepage.png",
     "liveUrl": "https://project-customer-support-zone.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/customer-support-zone"
+  },
+  {
+    "id": 3,
+    "name": "Champions League Dream Team",
+    "description": "A responsive React application where users build their own dream cricket team by selecting players within a limited coin budget.",
+    "features": [
+      "Purchase players within a limited coin balance in real time.",
+      "Prevent duplicate selections with a 6-player team limit.",
+      "Toggle between available and selected players with instant notifications."
+    ],
+    "technologies": ["React", "JavaScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
+    "image": "/projects-img/champions-league.png",
+    "liveUrl": "https://champions-league-twenty20.netlify.app/",
+    "githubUrl": "https://github.com/asm-saim/champions-league-twenty20"
+  },
+  {
+    "id": 4,
+    "name": "Green Earth",
+    "description": "A responsive web application that allows users to explore plants, filter them by categories, and view detailed plant information through a modern API-driven interface.",
+    "features": [
+      "Load and filter plant data dynamically from an open API.",
+      "View detailed plant information in an interactive modal.",
+      "Add plants to a cart with real-time total price calculation."
+    ],
+    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "image": "/projects-img/green-earth.png",
+    "liveUrl": "https://green-earth-v2.netlify.app/",
+    "githubUrl": "https://github.com/asm-saim/green-earth"
+  },
+  {
+    "id": 5,
+    "name": "Emergency Service Directory",
+    "description": "A responsive web application providing instant access to emergency hotline numbers, with one-click copy, mock call functionality, and live call history tracking.",
+    "features": [
+      "Copy hotline numbers directly to clipboard with a live counter.",
+      "Simulate emergency calls using a coin-based usage system.",
+      "Track every call made in a dynamic, clearable history log."
+    ],
+    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "image": "/projects-img/emergency-services.png",
+    "liveUrl": "https://asm-saim.github.io/emergency-services-portal/",
+    "githubUrl": "https://github.com/asm-saim/emergency-services-portal"
+  },
+  {
+    "id": 6,
+    "name": "PAYOO — Smart MFS Interface",
+    "description": "A smart Mobile Financial Services interface delivering a seamless digital banking experience for managing money transfers and transactions.",
+    "features": [
+      "Add money, cash out, and transfer funds with PIN-based authentication.",
+      "Earn and track promotional cashbacks and bonus rewards.",
+      "Browse a paginated, filterable transaction history log."
+    ],
+    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "image": "/projects-img/payoo.png",
+    "liveUrl": "https://asm-saim.github.io/payoo-mobile-bank/",
+    "githubUrl": "https://github.com/asm-saim/payoo-mobile-bank"
   }
 ]
