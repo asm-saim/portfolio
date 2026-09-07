@@ -2,78 +2,78 @@ import React from "react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const ProjectCard = ({ project }) => {
+  const { name, description, features, technologies, image, liveUrl, githubUrl } = project;
+
   return (
-    <div className="group overflow-hidden rounded-xl border border-blue-400/30 bg-[#3B82F6]/10 transition-all duration-300 hover:border-blue-400/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]">
-      <div className="grid grid-cols-1 md:grid-cols-2 md:h-[380px]">
+    <div className="rounded-xl border border-blue-600/40 bg-[#0A0F1E] overflow-hidden flex flex-col transition-all duration-300 hover:border-blue-500/60 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)] hover:-translate-y-1">
+      {/* Terminal top bar */}
+      <div className="flex items-center gap-1.5 px-4 py-3 bg-[#0B2F5B]/30 border-b border-blue-900/40">
+        <span className="w-3 h-3 rounded-full bg-red-400/70" />
+        <span className="w-3 h-3 rounded-full bg-yellow-400/70" />
+        <span className="w-3 h-3 rounded-full bg-green-400/70" />
+        <span className="ml-3 text-xs text-gray-500 font-mono">
+          ~/projects/{name.toLowerCase().replace(/\s+/g, "-")}
+        </span>
+      </div>
 
-        {/* Project Content */}
-        <div className="p-6 sm:p-8 flex flex-col justify-center">
+      {/* Project image */}
+      <div className="relative overflow-hidden border-b border-blue-900/40">
+        <img
+          src={image}
+          alt={name}
+          className="w-full h-48 object-cover object-top transition-transform duration-500 hover:scale-105"
+          loading="lazy"
+        />
+      </div>
 
-          <h3 className="text-2xl font-semibold text-white">
-            {project.name}
-          </h3>
+      {/* Content */}
+      <div className="flex flex-col flex-1 p-5">
+        <h3 className="text-xl font-semibold text-white">{name}</h3>
 
-          <p className="mt-3 text-sm sm:text-base text-gray-400 leading-6">
-            {project.description}
-          </p>
+        <p className="mt-2 text-gray-300 text-sm leading-relaxed">{description}</p>
 
-          {/* Features */}
-          <ul className="mt-4 space-y-1.5 text-sm text-gray-400">
-            {project.features.map((feature, index) => (
-              <li key={index} className="flex gap-2">
-                <span className="text-blue-400">•</span>
+        {/* Features */}
+        {features?.length > 0 && (
+          <ul className="mt-3 space-y-1.5">
+            {features.map((feature, idx) => (
+              <li key={idx} className="text-gray-400 text-xs sm:text-sm flex items-start gap-2">
+                <span className="text-blue-400 mt-1">▹</span>
                 <span>{feature}</span>
               </li>
             ))}
           </ul>
+        )}
 
-          {/* Technologies */}
-          <div className="mt-5 flex flex-wrap gap-2">
-            {project.technologies.map((technology, index) => (
-              <span
-                key={index}
-                className="rounded-full border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-xs text-blue-300"
-              >
-                {technology}
-              </span>
-            ))}
-          </div>
-
-          {/* Links */}
-          <div className="mt-6 flex flex-wrap gap-3">
-
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-4 py-2 text-sm font-medium transition-all duration-300  hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
-            >
-              <FaExternalLinkAlt className="text-xs" />
-              Live Demo
-            </a>
-
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2 text-sm font-medium transition-all duration-300 hover:border-blue-400/40 hover:text-blue-400"
-            >
-              <FaGithub />
-              GitHub
-            </a>
-
-          </div>
+        {/* Tech stack pills */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {technologies.map((tech) => (
+            <span key={tech} className="text-xs px-3 py-1 rounded-full bg-[#0B2F5B]/60 text-blue-300">
+              {tech}
+            </span>
+          ))}
         </div>
 
-        {/* Project Image */}
-        <div className="relative min-h-[260px] md:h-full overflow-hidden">
-          <img
-            src={project.image}
-            alt={`${project.name} project preview`}
-            className="h-full w-full object-cover"
-          />
+        {/* Actions */}
+        <div className="mt-5 flex gap-3 pt-4 border-t border-blue-900/40">
+          <a
+            href={liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-sm border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
+          >
+            <FaExternalLinkAlt className="text-xs" />
+            Live Site
+          </a>
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-sm rounded-lg border border-gray-600 text-gray-300 bg-transparent transition-all duration-300 ease-out hover:border-blue-400 hover:text-blue-400"
+          >
+            <FaGithub className="text-sm" />
+            Code
+          </a>
         </div>
-
       </div>
     </div>
   );
