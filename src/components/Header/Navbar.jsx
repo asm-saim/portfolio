@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../../assets/logo.png";
 import { IoMail } from "react-icons/io5";
@@ -6,34 +5,22 @@ import { IoMail } from "react-icons/io5";
 const Navbar = () => {
   const list = (
     <>
-      <NavLink
-        to="/"
-        className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-      >
+      <NavLink to="/" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
         <li className="m-3 font-semibold text-base">Home</li>
       </NavLink>
-      <NavLink
-        to="/about"
-        className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-      >
+      <NavLink to="/about" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
         <li className="m-3 font-semibold text-base">About</li>
       </NavLink>
-      <NavLink
-        to="/projects"
-        className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-      >
+      <NavLink to="/projects" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
         <li className="m-3 font-semibold text-base">Projects</li>
       </NavLink>
-      <NavLink
-        to="/resume"
-        className={({ isActive }) => (isActive ? "text-blue-400" : "")}
-      >
+      <NavLink to="/resume" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
         <li className="m-3 font-semibold text-base">Resume</li>
       </NavLink>
     </>
   );
   return (
-    <div className="">
+    <div className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-b from-base-100/60 to-base-100/30 border-b border-white/5">
       <div className="navbar max-w-6xl mx-auto px-4 sm:px-6 lg:px-0">
         <div className="navbar-start">
           <div className="dropdown">
@@ -46,30 +33,18 @@ const Navbar = () => {
                 stroke="currentColor"
               >
                 {" "}
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />{" "}
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />{" "}
               </svg>
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-48 sm:w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100/90 backdrop-blur-md rounded-box z-1 mt-3 w-48 sm:w-52 p-2 shadow"
             >
               {list}
             </ul>
           </div>
-          <Link
-            to="/"
-            className="flex items-center space-x-1.5 cursor-pointer px-0"
-          >
-            <img
-              src={logo}
-              className="w-7 sm:w-8 mr-0.5"
-              alt="portfolio logo"
-            />
+          <Link to="/" className="flex items-center space-x-1.5 cursor-pointer px-0">
+            <img src={logo} className="w-7 sm:w-8 mr-0.5" alt="portfolio logo" />
             <span className="text-lg sm:text-3xl font-bold ">aim</span>
           </Link>
         </div>
