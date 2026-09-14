@@ -52,7 +52,7 @@ const Banner = () => {
         {/* Image with glow */}
         <div className="flex-1 relative flex justify-center items-center">
           <div
-            className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-[500px] lg:h-[500px] rounded-full bg-gradient-to-br from-[#0B2F5B] via-[#3B82F6] to-cyan-400 blur-[120px] opacity-40"
+            className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-[500px] lg:h-[200px] rounded-full bg-gradient-to-br from-[#0B2F5B] via-[#3B82F6] to-cyan-400 blur-[120px] opacity-40"
             aria-hidden="true"
           />
           <img
