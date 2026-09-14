@@ -64,7 +64,7 @@ const Resume = () => {
         description="View the resume of A S M Saim, a Full Stack Web Developer skilled in React, JavaScript, TypeScript, Node.js, MongoDB, and modern web technologies."
       />
 
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 pt-24 md:pt-24 lg:pt-28">
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 pt-24 md:pt-24 lg:pt-24">
         {/* Header */}
         <div className="text-center mb-8">
           <span className="block text-3xl text-center font-bold tracking-widest text-blue-400 uppercase mb-1">
