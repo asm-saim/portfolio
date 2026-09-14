@@ -124,7 +124,7 @@ const About = () => {
 
       {/* Experience */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Experience</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">Experience</h3>
         <div className="space-y-6">
           {experience.map(({ role, company, description }) => (
             <div
@@ -141,7 +141,7 @@ const About = () => {
 
       {/* Education */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Education</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">Education</h3>
         <div className="space-y-6">
           {education.map(({ degree, institute, description }) => (
             <div

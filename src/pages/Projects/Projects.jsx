@@ -1,19 +1,17 @@
-import React from "react";
 import projects from "../../projects-data/projects-data.json";
 import ProjectCard from "../../components/Project-Card/Project-card";
 
 const Projects = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 pb-16  "id="projects">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight">
+    <section className="max-w-6xl mx-auto px-4 pb-16 pt-24 md:pt-28 lg:pt-24" id="projects">
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold leading-tight">
           <span className="text-blue-400">{"<"}</span>
           Projects
           <span className="text-blue-400">{" />"}</span>
         </h2>
-        <p className="mt-3 text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
-          A few things I've built while learning, experimenting, and solving
-          real problems with code.
+        <p className="mt-1 text-gray-400 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          A few things I've built while learning, experimenting, and solving real problems with code.
         </p>
       </div>
 
