@@ -1,4 +1,3 @@
-import React from "react";
 import { FaGithub } from "react-icons/fa";
 
 const skills = {
@@ -27,7 +26,10 @@ const education = [
 
 const About = () => {
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16" id="about">
+    <section
+      className="min-h-screen flex flex-col justify-center max-w-6xl mx-auto px-4 py-16 pt-24 md:pt-28 lg:pt-48"
+      id="about"
+    >
       {/* Hook + Narrative + CTA (Dashboard side) */}
       <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 items-center mb-16">
         {/* Left: Headline + narrative + CTA */}
@@ -100,7 +102,7 @@ const About = () => {
 
       {/* Toolkit grid */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">Technical Skills</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Technical Skills</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(skills).map(([category, items]) => (
             <div
@@ -122,7 +124,7 @@ const About = () => {
 
       {/* Experience */}
       <div className="mb-12">
-        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">Experience</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Experience</h3>
         <div className="space-y-6">
           {experience.map(({ role, company, description }) => (
             <div
@@ -139,7 +141,7 @@ const About = () => {
 
       {/* Education */}
       <div>
-        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left">Education</h3>
+        <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Education</h3>
         <div className="space-y-6">
           {education.map(({ degree, institute, description }) => (
             <div
