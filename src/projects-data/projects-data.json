@@ -1,6 +1,38 @@
 [
   {
     "id": 1,
+    "name": "FitLog — Workout Library",
+    "description": "A responsive workout library built with Next.js and TypeScript that helps users explore exercises, build daily workout plans, save workouts, and track completed exercises.",
+    "features": [
+      "Browse and search workouts with sorting and filtering options.",
+      "View detailed exercise information and step-by-step instructions.",
+      "Build a daily workout plan with a five-exercise limit.",
+      "Save favorite workouts for later with persistent storage.",
+      "Track completed exercises and view workout statistics."
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Lucide React"],
+    "image": "/projects-img/fit-log.png",
+    "liveUrl": "https://fit-log-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/fit-log"
+  },
+  {
+    "id": 2,
+    "name": "BazarDor — বাজার দর",
+    "description": "A responsive Bangla market-price tracking application that helps users explore daily prices of essential products and compare prices across local markets.",
+    "features": [
+      "Explore essential products and their current market prices in Bangla.",
+      "Browse products by category and search for specific items.",
+      "Compare prices across different local markets.",
+      "Identify price increases and decreases with visual indicators.",
+      "View detailed product information and market-wise price statistics."
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "DaisyUI"],
+    "image": "/projects-img/bazar-dor.png",
+    "liveUrl": "https://bazar-dor-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/bazar-dor"
+  },
+  {
+    "id": 3,
     "name": "Simplico",
     "description": "A modern and responsive React application that showcases popular mobile applications in an App Store-style interface.",
     "features": [
@@ -14,7 +46,7 @@
     "githubUrl": "https://github.com/asm-saim/simplico"
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "Customer Support Zone",
     "description": "A responsive React application for managing customer support tickets through an interactive workflow.",
     "features": [
@@ -28,7 +60,7 @@
     "githubUrl": "https://github.com/asm-saim/customer-support-zone"
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "Champions League Dream Team",
     "description": "A responsive React application where users build their own dream cricket team by selecting players within a limited coin budget.",
     "features": [
@@ -42,7 +74,7 @@
     "githubUrl": "https://github.com/asm-saim/champions-league-twenty20"
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "Green Earth",
     "description": "A responsive web application that allows users to explore plants, filter them by categories, and view detailed plant information through a modern API-driven interface.",
     "features": [
@@ -56,7 +88,7 @@
     "githubUrl": "https://github.com/asm-saim/green-earth"
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "Emergency Service Directory",
     "description": "A responsive web application providing instant access to emergency hotline numbers, with one-click copy, mock call functionality, and live call history tracking.",
     "features": [
@@ -70,7 +102,7 @@
     "githubUrl": "https://github.com/asm-saim/emergency-services-portal"
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "PAYOO — Smart MFS Interface",
     "description": "A smart Mobile Financial Services interface delivering a seamless digital banking experience for managing money transfers and transactions.",
     "features": [
