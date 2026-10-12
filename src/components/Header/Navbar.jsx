@@ -6,16 +6,16 @@ const Navbar = () => {
   const list = (
     <>
       <NavLink to="/" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
-        <li className="m-3 font-semibold text-base">Home</li>
+        <li className="m-3 font-normal text-base">Home</li>
       </NavLink>
       <NavLink to="/about" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
-        <li className="m-3 font-semibold text-base">About</li>
+        <li className="m-3 font-normal text-base">About</li>
       </NavLink>
       <NavLink to="/projects" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
-        <li className="m-3 font-semibold text-base">Projects</li>
+        <li className="m-3 font-normal text-base">Projects</li>
       </NavLink>
       <NavLink to="/resume" className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
-        <li className="m-3 font-semibold text-base">Resume</li>
+        <li className="m-3 font-normal text-base">Resume</li>
       </NavLink>
     </>
   );
@@ -45,7 +45,7 @@ const Navbar = () => {
           </div>
           <Link to="/" className="flex items-center space-x-1.5 cursor-pointer px-0">
             <img src={logo} className="w-7 sm:w-8 mr-0.5" alt="portfolio logo" />
-            <span className="text-lg sm:text-3xl font-bold ">aim</span>
+            <span className="text-lg sm:text-3xl font-medium ">aim</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -58,7 +58,7 @@ const Navbar = () => {
             className="btn btn-sm sm:btn-md border-none text-sm sm:text-base rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
           >
             <IoMail />
-            <span className="hidden sm:inline">Get In Touch</span>
+            <span className="hidden sm:inline font-medium">Get In Touch</span>
           </a>
         </div>
       </div>

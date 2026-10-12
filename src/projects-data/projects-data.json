@@ -1,35 +1,31 @@
 [
   {
     "id": 1,
+    "name": "BazarDor — বাজার দর",
+    "description": "A responsive Bangla market-price tracking application that helps users explore daily prices of essential products and compare prices across local markets.",
+    "features": [
+      "Explore daily essential prices in Bangla, with price increases and decreases clearly marked.",
+      "Browse products by category and sort them by price.",
+      "View market-wise minimum, maximum, and average prices for each product."
+    ],
+    "technologies": ["Next.js", "React", "TypeScript", "Better Auth", "MongoDB"],
+    "image": "/projects-img/bazar-dor.png",
+    "liveUrl": "https://bazar-dor-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/bazar-dor"
+  },
+  {
+    "id": 2,
     "name": "FitLog — Workout Library",
     "description": "A responsive workout library built with Next.js and TypeScript that helps users explore exercises, build daily workout plans, save workouts, and track completed exercises.",
     "features": [
-      "Browse and search workouts with sorting and filtering options.",
-      "View detailed exercise information and step-by-step instructions.",
-      "Build a daily workout plan with a five-exercise limit.",
-      "Save favorite workouts for later with persistent storage.",
+      "Browse, search, sort, and filter workouts with detailed step-by-step instructions.",
+      "Build a daily workout plan with a five-exercise limit and save favorites with persistent storage.",
       "Track completed exercises and view workout statistics."
     ],
     "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Lucide React"],
     "image": "/projects-img/fit-log.png",
     "liveUrl": "https://fit-log-v1.vercel.app/",
     "githubUrl": "https://github.com/asm-saim/fit-log"
-  },
-  {
-    "id": 2,
-    "name": "BazarDor — বাজার দর",
-    "description": "A responsive Bangla market-price tracking application that helps users explore daily prices of essential products and compare prices across local markets.",
-    "features": [
-      "Explore essential products and their current market prices in Bangla.",
-      "Browse products by category and search for specific items.",
-      "Compare prices across different local markets.",
-      "Identify price increases and decreases with visual indicators.",
-      "View detailed product information and market-wise price statistics."
-    ],
-    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "DaisyUI"],
-    "image": "/projects-img/bazar-dor.png",
-    "liveUrl": "https://bazar-dor-v1.vercel.app/",
-    "githubUrl": "https://github.com/asm-saim/bazar-dor"
   },
   {
     "id": 3,
