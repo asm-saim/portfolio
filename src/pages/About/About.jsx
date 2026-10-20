@@ -54,7 +54,7 @@ const About = () => {
 
             <div className="mt-6 flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
               <a
-                href="http://localhost:5173/resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
@@ -62,7 +62,7 @@ const About = () => {
                 View Resume
               </a>
               <a
-                href="http://localhost:5173/resume.pdf"
+                href="/resume.pdf"
                 download
                 className="btn btn-sm md:btn-md rounded-lg border border-blue-400 text-blue-400 bg-transparent transition-all duration-300 ease-out hover:bg-blue-400 hover:text-white"
               >
