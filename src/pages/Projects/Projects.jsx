@@ -1,8 +1,12 @@
+import { useState } from "react";
 import projects from "../../projects-data/projects-data.json";
 import ProjectCard from "../../components/Project-Card/Project-card";
+import ProjectDetailsModal from "../../components/ProjectDetailsModal/ProjectDetailsModal";
 import PageMeta from "../../components/PageMeta/PageMeta";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <>
       <PageMeta
@@ -22,11 +26,22 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onOpen={() => setSelectedProject(project)}
+            />
           ))}
         </div>
+
+        {selectedProject && (
+          <ProjectDetailsModal
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
       </section>
     </>
   );

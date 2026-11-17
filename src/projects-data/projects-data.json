@@ -1,6 +1,63 @@
+
 [
   {
     "id": 1,
+    "name": "HireLoop — Job Hunting Platform",
+    "description": "A full-stack recruitment platform connecting job seekers, recruiters, and administrators through a centralized hiring experience. Users can discover jobs, manage applications, track recruitment progress, and handle subscription plans.",
+    "features": [
+      "Explore, search, and filter job opportunities by keyword, location, category, job type, and salary.",
+      "Manage job applications, save jobs, upload resumes, and track application statuses through personalized dashboards.",
+      "Enable recruiters to manage companies, publish job listings, review applicants, and monitor hiring analytics.",
+      "Provide administrators with user management, company approval, job moderation, and subscription monitoring.",
+      "Integrate Stripe subscriptions, Google authentication, and email notifications."
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "MongoDB",
+      "Better Auth",
+      "Stripe",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Framer Motion",
+      "Recharts"
+    ],
+    "image": "/projects-img/hireloop.png",
+    "liveUrl": "https://hireloop-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/hireloop-client"
+  },
+  {
+    "id": 2,
+    "name": "StudioSpace — Creative Studio Marketplace",
+    "description": "A full-stack marketplace connecting creative professionals with studio owners. Users can discover photography studios, podcast rooms, music recording spaces, and other creative workspaces, manage listings, and book studios through an integrated reservation system.",
+    "features": [
+      "Explore and search creative studios with category-based filtering and location search.",
+      "Allow hosts to create, update, and manage studio listings with pricing, amenities, capacity, and image galleries.",
+      "Enable guests to submit booking requests with dynamically calculated pricing based on booking duration.",
+      "Manage booking requests with pending, confirmed, completed, and cancelled statuses.",
+      "Prevent double bookings through server-side time-overlap validation.",
+      "Provide personalized dashboards for managing studio listings, reservations, and booking requests."
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "JWT",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Swiper",
+      "ImgBB API"
+    ],
+    "image": "/projects-img/studio-space.png",
+    "liveUrl": "https://studio-space-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/studio-space-client"
+  },
+  {
+    "id": 3,
     "name": "BazarDor — বাজার দর",
     "description": "A responsive Bangla market-price tracking application that helps users explore daily prices of essential products and compare prices across local markets.",
     "features": [
@@ -8,13 +65,19 @@
       "Browse products by category and sort them by price.",
       "View market-wise minimum, maximum, and average prices for each product."
     ],
-    "technologies": ["Next.js", "React", "TypeScript", "Better Auth", "MongoDB"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Better Auth",
+      "MongoDB"
+    ],
     "image": "/projects-img/bazar-dor.png",
     "liveUrl": "https://bazar-dor-v1.vercel.app/",
     "githubUrl": "https://github.com/asm-saim/bazar-dor"
   },
   {
-    "id": 2,
+    "id": 4,
     "name": "FitLog — Workout Library",
     "description": "A responsive workout library built with Next.js and TypeScript that helps users explore exercises, build daily workout plans, save workouts, and track completed exercises.",
     "features": [
@@ -22,13 +85,19 @@
       "Build a daily workout plan with a five-exercise limit and save favorites with persistent storage.",
       "Track completed exercises and view workout statistics."
     ],
-    "technologies": ["Next.js", "React", "TypeScript", "Tailwind CSS", "Lucide React"],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Lucide React"
+    ],
     "image": "/projects-img/fit-log.png",
     "liveUrl": "https://fit-log-v1.vercel.app/",
     "githubUrl": "https://github.com/asm-saim/fit-log"
   },
   {
-    "id": 3,
+    "id": 5,
     "name": "Simplico",
     "description": "A modern and responsive React application that showcases popular mobile applications in an App Store-style interface.",
     "features": [
@@ -36,13 +105,19 @@
       "View detailed information for individual applications.",
       "Install and manage applications with interactive charts."
     ],
-    "technologies": ["React", "JavaScript", "React Router", "Tailwind CSS", "Recharts"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "React Router",
+      "Tailwind CSS",
+      "Recharts"
+    ],
     "image": "/projects-img/simplico.png",
     "liveUrl": "https://simplico-v1.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/simplico"
   },
   {
-    "id": 4,
+    "id": 6,
     "name": "Customer Support Zone",
     "description": "A responsive React application for managing customer support tickets through an interactive workflow.",
     "features": [
@@ -50,13 +125,19 @@
       "Track in-progress and resolved tickets in real time.",
       "Complete tasks with duplicate-assignment prevention."
     ],
-    "technologies": ["React", "JavaScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Toastify"
+    ],
     "image": "/projects-img/customer-homepage.png",
     "liveUrl": "https://project-customer-support-zone.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/customer-support-zone"
   },
   {
-    "id": 5,
+    "id": 7,
     "name": "Champions League Dream Team",
     "description": "A responsive React application where users build their own dream cricket team by selecting players within a limited coin budget.",
     "features": [
@@ -64,13 +145,19 @@
       "Prevent duplicate selections with a 6-player team limit.",
       "Toggle between available and selected players with instant notifications."
     ],
-    "technologies": ["React", "JavaScript", "Tailwind CSS", "DaisyUI", "React Toastify"],
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "React Toastify"
+    ],
     "image": "/projects-img/dream-team.png",
     "liveUrl": "https://champions-league-twenty20.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/champions-league-twenty20"
   },
   {
-    "id": 6,
+    "id": 8,
     "name": "Green Earth",
     "description": "A responsive web application that allows users to explore plants, filter them by categories, and view detailed plant information through a modern API-driven interface.",
     "features": [
@@ -78,13 +165,18 @@
       "View detailed plant information in an interactive modal.",
       "Add plants to a cart with real-time total price calculation."
     ],
-    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "technologies": [
+      "HTML5",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
     "image": "/projects-img/green-earth.png",
     "liveUrl": "https://green-earth-v2.netlify.app/",
     "githubUrl": "https://github.com/asm-saim/green-earth"
   },
   {
-    "id": 7,
+    "id": 9,
     "name": "Emergency Service Directory",
     "description": "A responsive web application providing instant access to emergency hotline numbers, with one-click copy, mock call functionality, and live call history tracking.",
     "features": [
@@ -92,13 +184,18 @@
       "Simulate emergency calls using a coin-based usage system.",
       "Track every call made in a dynamic, clearable history log."
     ],
-    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "technologies": [
+      "HTML5",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
     "image": "/projects-img/emergency-service-portal.png",
     "liveUrl": "https://asm-saim.github.io/emergency-services-portal/",
     "githubUrl": "https://github.com/asm-saim/emergency-services-portal"
   },
   {
-    "id": 8,
+    "id": 10,
     "name": "PAYOO — Smart MFS Interface",
     "description": "A smart Mobile Financial Services interface delivering a seamless digital banking experience for managing money transfers and transactions.",
     "features": [
@@ -106,7 +203,12 @@
       "Earn and track promotional cashbacks and bonus rewards.",
       "Browse a paginated, filterable transaction history log."
     ],
-    "technologies": ["HTML5", "JavaScript", "Tailwind CSS", "DaisyUI"],
+    "technologies": [
+      "HTML5",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI"
+    ],
     "image": "/projects-img/payoo.png",
     "liveUrl": "https://asm-saim.github.io/payoo-mobile-bank/",
     "githubUrl": "https://github.com/asm-saim/payoo-mobile-bank"
