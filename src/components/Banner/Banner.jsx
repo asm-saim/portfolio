@@ -1,6 +1,7 @@
-import React from "react";
+import { motion } from "framer-motion";
 import bannerImg from "../../assets/banner.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { EASE, fadeIn, fadeUp, staggerContainer, tapScale } from "../../motion/variants";
 
 const socialLinks = [
   {
@@ -18,51 +19,73 @@ const socialLinks = [
 const Banner = () => {
   return (
     <div className="min-h-screen flex items-center pt-20">
-      <section className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 lg:gap-6 text-center lg:text-left w-full">
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={staggerContainer}
+        className="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10 lg:gap-6 text-center lg:text-left w-full"
+      >
         {/* Text content */}
         <div className="flex-1 flex flex-col items-center lg:items-start">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">Hi, I'm Saim.</h1>
+          <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Hi, I'm Saim.
+          </motion.h1>
 
-          <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-1">
+          <motion.h2
+            variants={fadeUp}
+            className="text-3xl md:text-4xl font-semibold leading-tight mt-1"
+          >
             <span className="text-blue-400">Full Stack Developer</span>
-          </h2>
+          </motion.h2>
 
-          <p className="mt-6 text-gray-300 max-w-md sm:max-w-lg lg:max-w-xl text-sm sm:text-base md:text-base leading-relaxed">
+          <motion.p
+            variants={fadeUp}
+            className="mt-6 text-gray-300 max-w-md sm:max-w-lg lg:max-w-xl text-sm sm:text-base md:text-base leading-relaxed"
+          >
             Specializing in full-stack development and scalable solutions that drive business growth — turning ideas
             into seamless, user-friendly digital experiences.
-          </p>
+          </motion.p>
 
-          <div className="mt-8 flex flex-row gap-4 sm:gap-6 justify-center lg:justify-start w-full">
+          <motion.div
+            variants={fadeUp}
+            className="mt-8 flex flex-row gap-4 sm:gap-6 justify-center lg:justify-start w-full"
+          >
             {socialLinks.map(({ href, label, icon: Icon }) => (
-              <a
+              <motion.a
                 key={label}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
+                whileHover={{ y: -3 }}
+                whileTap={tapScale}
+                transition={{ type: "spring", stiffness: 350, damping: 22 }}
+                className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-shadow duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
               >
                 <Icon className="text-lg" />
                 {label}
-              </a>
+              </motion.a>
             ))}
-          </div>
+          </motion.div>
         </div>
 
         {/* Image with glow */}
         <div className="flex-1 relative flex justify-center items-center">
-          <div
+          <motion.div
+            variants={fadeIn}
+            transition={{ duration: 0.8, ease: EASE }}
             className="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-[450px] lg:h-[200px] rounded-full bg-gradient-to-br from-[#0B2F5B] via-[#3B82F6] to-cyan-400 blur-[120px] opacity-40"
             aria-hidden="true"
           />
-          <img
+          <motion.img
+            variants={fadeUp}
             src={bannerImg}
             alt="Saim - Full Stack Developer"
             loading="eager"
             className="relative z-10 mt-6 lg:mt-11 w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-none lg:h-[81vh] object-contain"
           />
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

@@ -6,7 +6,7 @@ const ProjectCard = ({ project, onOpen }) => {
   const remainingTech = technologies.length - visibleTech.length;
 
   return (
-    <article className="group relative rounded-xl border border-blue-500/40 bg-[#0A0F1E] overflow-hidden flex flex-col transition-all duration-300 hover:border-blue-400 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
+    <article className="group relative h-full rounded-xl border border-blue-500/40 bg-[#0A0F1E] overflow-hidden flex flex-col transition-[border-color,box-shadow] duration-300 hover:border-blue-400 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
       {/* Project image */}
       <div className="relative overflow-hidden">
         <img

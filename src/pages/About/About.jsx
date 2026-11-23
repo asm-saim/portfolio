@@ -1,5 +1,8 @@
+import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import PageMeta from "../../components/PageMeta/PageMeta";
+import Reveal from "../../components/Reveal/Reveal";
+import { fadeUp, hoverLift, staggerContainer, tapScale } from "../../motion/variants";
 
 const skills = {
   Frontend: ["HTML", "CSS", "Tailwind CSS", "JavaScript", "TypeScript", "React", "Next.js"],
@@ -38,9 +41,9 @@ const About = () => {
         id="about"
       >
         {/* Hook + Narrative + CTA (Dashboard side) */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 items-center mb-16">
+        <Reveal className="grid grid-cols-1 lg:grid-cols-[1.4fr_1fr] gap-10 items-center mb-16">
           {/* Left: Headline + narrative + CTA */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
+          <motion.div variants={fadeUp} className="text-center lg:text-left order-2 lg:order-1">
             <h2 className="text-3xl md:text-4xl font-bold leading-tight">Hi, I'm A S M Saim.</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-blue-400 mt-1">
               I build full-stack applications that bridge solid backend logic with seamless user experiences.
@@ -53,68 +56,88 @@ const About = () => {
             </p>
 
             <div className="mt-6 flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
-              <a
+              <motion.a
                 href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
+                whileHover={{ y: -3 }}
+                whileTap={tapScale}
+                className="btn btn-sm md:btn-md border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-shadow duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
               >
                 View Resume
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="/resume.pdf"
                 download
-                className="btn btn-sm md:btn-md rounded-lg border border-blue-400 text-blue-400 bg-transparent transition-all duration-300 ease-out hover:bg-blue-400 hover:text-white"
+                whileHover={{ y: -3 }}
+                whileTap={tapScale}
+                className="btn btn-sm md:btn-md rounded-lg border border-blue-400 text-blue-400 bg-transparent transition-colors duration-300 ease-out hover:bg-blue-400 hover:text-white"
               >
                 Download Resume
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="https://github.com/asm-saim"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-sm md:btn-md rounded-lg border border-gray-600 text-gray-300 bg-transparent transition-all duration-300 ease-out hover:border-blue-400 hover:text-blue-400"
+                whileHover={{ y: -3 }}
+                whileTap={tapScale}
+                className="btn btn-sm md:btn-md rounded-lg border border-gray-600 text-gray-300 bg-transparent transition-colors duration-300 ease-out hover:border-blue-400 hover:text-blue-400"
               >
                 <FaGithub className="text-lg" />
                 View GitHub
-              </a>
+              </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Terminal-style identity card (the "Engine") */}
-          <div className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/30 to-transparent p-6 font-mono text-sm order-1 lg:order-2">
-            <div className="flex gap-1.5 mb-4">
-              <span className="w-3 h-3 rounded-full bg-red-400/70" />
-              <span className="w-3 h-3 rounded-full bg-yellow-400/70" />
-              <span className="w-3 h-3 rounded-full bg-green-400/70" />
-            </div>
-            <p className="text-gray-400">
-              <span className="text-blue-400">const</span> developer = {"{"}
-            </p>
-            <p className="pl-4 text-gray-300">
-              name: <span className="text-green-400">'A S M Saim'</span>,
-            </p>
-            <p className="pl-4 text-gray-300">
-              role: <span className="text-green-400">'Full Stack Developer'</span>,
-            </p>
-            <p className="pl-4 text-gray-300">
-              status: <span className="text-green-400">'Open to Work'</span>,
-            </p>
-            <p className="pl-4 text-gray-300">
-              stack: [<span className="text-green-400">'React'</span>, <span className="text-green-400">'Node.js'</span>
-              , <span className="text-green-400">'MongoDB'</span>],
-            </p>
-            <p className="text-gray-400">{"}"}</p>
-          </div>
-        </div>
+          <motion.div
+            variants={fadeUp}
+            className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/30 to-transparent p-6 font-mono text-sm order-1 lg:order-2"
+          >
+            <motion.div variants={staggerContainer} initial="hidden" animate="visible">
+              <div className="flex gap-1.5 mb-4">
+                <span className="w-3 h-3 rounded-full bg-red-400/70" />
+                <span className="w-3 h-3 rounded-full bg-yellow-400/70" />
+                <span className="w-3 h-3 rounded-full bg-green-400/70" />
+              </div>
+              <motion.p variants={fadeUp} className="text-gray-400">
+                <span className="text-blue-400">const</span> developer = {"{"}
+              </motion.p>
+              <motion.p variants={fadeUp} className="pl-4 text-gray-300">
+                name: <span className="text-green-400">'A S M Saim'</span>,
+              </motion.p>
+              <motion.p variants={fadeUp} className="pl-4 text-gray-300">
+                role: <span className="text-green-400">'Full Stack Developer'</span>,
+              </motion.p>
+              <motion.p variants={fadeUp} className="pl-4 text-gray-300">
+                status: <span className="text-green-400">'Open to Work'</span>,
+              </motion.p>
+              <motion.p variants={fadeUp} className="pl-4 text-gray-300">
+                stack: [<span className="text-green-400">'React'</span>, <span className="text-green-400">'Node.js'</span>
+                , <span className="text-green-400">'MongoDB'</span>],
+              </motion.p>
+              <motion.p variants={fadeUp} className="text-gray-400">
+                {"}"}
+              </motion.p>
+            </motion.div>
+          </motion.div>
+        </Reveal>
 
         {/* Toolkit grid */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16">Technical Skills</h3>
+        <Reveal className="mb-12">
+          <motion.h3
+            variants={fadeUp}
+            className="text-2xl font-bold mb-6 text-center lg:text-left pt-8 md:pt-12 lg:pt-16"
+          >
+            Technical Skills
+          </motion.h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {Object.entries(skills).map(([category, items]) => (
-              <div
+              <motion.div
                 key={category}
-                className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/20 to-transparent p-5"
+                variants={fadeUp}
+                whileHover={hoverLift}
+                className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/20 to-transparent p-5 transition-[border-color,box-shadow] duration-300 hover:border-blue-400/30 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
               >
                 <h4 className="text-blue-400 font-semibold mb-3">{category}</h4>
                 <div className="flex flex-wrap gap-2">
@@ -127,44 +150,50 @@ const About = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Experience */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">Experience</h3>
+        <Reveal className="mb-12">
+          <motion.h3 variants={fadeUp} className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">
+            Experience
+          </motion.h3>
           <div className="space-y-6">
             {experience.map(({ role, company, description }) => (
-              <div
+              <motion.div
                 key={role}
+                variants={fadeUp}
                 className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/20 to-transparent p-5"
               >
                 <h4 className="text-lg font-semibold">{role}</h4>
                 <p className="text-blue-400 text-sm mb-2">{company}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Education */}
-        <div>
-          <h3 className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">Education</h3>
+        <Reveal>
+          <motion.h3 variants={fadeUp} className="text-2xl font-bold mb-6 text-center lg:text-left pt-6 md:pt-6 lg:pt-8">
+            Education
+          </motion.h3>
           <div className="space-y-6">
             {education.map(({ degree, institute, description }) => (
-              <div
+              <motion.div
                 key={degree}
+                variants={fadeUp}
                 className="rounded-xl border border-blue-900/40 bg-gradient-to-br from-[#0B2F5B]/20 to-transparent p-5"
               >
                 <h4 className="text-lg font-semibold">{degree}</h4>
                 <p className="text-blue-400 text-sm mb-2">{institute}</p>
                 <p className="text-gray-300 text-sm leading-relaxed">{description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
     </>
   );

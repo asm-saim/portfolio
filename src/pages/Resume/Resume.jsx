@@ -1,4 +1,7 @@
+import { motion } from "framer-motion";
 import PageMeta from "../../components/PageMeta/PageMeta";
+import Reveal from "../../components/Reveal/Reveal";
+import { fadeUp, hoverLift, tapScale } from "../../motion/variants";
 import {
   FaDownload,
   FaExternalLinkAlt,
@@ -21,7 +24,6 @@ import {
   SiExpress,
   SiJavascript,
 } from "react-icons/si";
-import { RiRobot2Line, RiBrainLine } from "react-icons/ri";
 import { ImMail4 } from "react-icons/im";
 
 const Resume = () => {
@@ -66,7 +68,7 @@ const Resume = () => {
 
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-6 pt-24 md:pt-24 lg:pt-24">
         {/* Header */}
-        <div className="text-center mb-8">
+        <Reveal variant={fadeUp} className="text-center mb-8">
           <span className="block text-3xl text-center font-bold tracking-widest text-blue-400 uppercase mb-1">
             My Resume
           </span>
@@ -74,12 +76,12 @@ const Resume = () => {
           <p className="mt-1 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7 italic">
             A quick overview of my technical skills, experience, education, and development journey.
           </p>
-        </div>
+        </Reveal>
 
         {/* Resume Card */}
-        <div className="rounded-xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/20 to-[#3B82F6]/10 p-6 sm:p-8">
+        <Reveal className="rounded-xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/20 to-[#3B82F6]/10 p-6 sm:p-8">
           {/* Intro */}
-          <div className="max-w-3xl">
+          <motion.div variants={fadeUp} className="max-w-3xl">
             <h2 className="text-2xl sm:text-3xl font-semibold text-white">A S M Saim</h2>
 
             <p className="mt-2 text-blue-400 font-medium">Full Stack Developer</p>
@@ -89,35 +91,39 @@ const Resume = () => {
               on clean code, scalable architecture, responsive interfaces, and practical solutions through continuous
               learning and problem-solving.
             </p>
-          </div>
+          </motion.div>
 
           {/* Buttons */}
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a
+          <motion.div variants={fadeUp} className="mt-7 flex flex-wrap gap-3">
+            <motion.a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
+              whileHover={hoverLift}
+              whileTap={tapScale}
+              className="flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-5 py-2.5 text-sm font-medium text-white transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(59,130,246,0.6)]"
             >
               <FaExternalLinkAlt className="text-xs" />
               View Resume
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="/resume.pdf"
               download
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:border-blue-400/40 hover:text-blue-400"
+              whileHover={hoverLift}
+              whileTap={tapScale}
+              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-[border-color,color,box-shadow] duration-300 hover:border-blue-400/40 hover:text-blue-400"
             >
               <FaDownload className="text-sm" />
               Download Resume
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
           {/* Divider */}
           <div className="my-8 border-t border-white/10"></div>
 
           {/* Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <motion.div variants={fadeUp} className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Technical Skills */}
             <div className="rounded-xl border border-white/10 bg-black/20 p-5">
               <h3 className="text-sm font-medium tracking-widest text-blue-400 uppercase">Technical Skills</h3>
@@ -172,46 +178,56 @@ const Resume = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </Reveal>
 
         {/* Bottom CTA */}
-        <div className="my-14 pt-4 text-center">
-          <h2 className="text-xl sm:text-2xl font-semibold text-white">Interested in working together?</h2>
+        <Reveal className="my-14 pt-4 text-center">
+          <motion.h2 variants={fadeUp} className="text-xl sm:text-2xl font-semibold text-white">
+            Interested in working together?
+          </motion.h2>
 
-          <p className="mt-2 text-sm text-gray-400">Feel free to get in touch with me.</p>
+          <motion.p variants={fadeUp} className="mt-2 text-sm text-gray-400">
+            Feel free to get in touch with me.
+          </motion.p>
 
-          <div className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-3">
+          <motion.div variants={fadeUp} className="mt-5 flex flex-col sm:flex-row justify-center items-center gap-3">
             {/* LinkedIn */}
-            <a
+            <motion.a
               href="https://www.linkedin.com/in/asmsaim/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-blue-400/40 hover:text-blue-400"
+              whileHover={{ y: -3 }}
+              whileTap={tapScale}
+              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-[border-color,color] duration-300 hover:border-blue-400/40 hover:text-blue-400"
             >
               <FaLinkedin />
               LinkedIn
-            </a>
+            </motion.a>
 
             {/* Email */}
-            <a
+            <motion.a
               href="mailto:saim777m@gmail.com"
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-blue-400/40 hover:text-blue-400"
+              whileHover={{ y: -3 }}
+              whileTap={tapScale}
+              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-[border-color,color] duration-300 hover:border-blue-400/40 hover:text-blue-400"
             >
               <ImMail4 />
               saim777m@gmail.com
-            </a>
+            </motion.a>
 
             {/* Phone */}
-            <a
+            <motion.a
               href="tel:+8801768692766"
-              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:border-blue-400/40 hover:text-blue-400"
+              whileHover={{ y: -3 }}
+              whileTap={tapScale}
+              className="flex items-center gap-2 rounded-lg border border-white/10 px-5 py-2.5 text-sm font-medium text-white transition-[border-color,color] duration-300 hover:border-blue-400/40 hover:text-blue-400"
             >
               <FaPhoneAlt className="text-xs" />
               +880 1768-692766
-            </a>
-          </div>
-        </div>
+            </motion.a>
+          </motion.div>
+        </Reveal>
       </section>
     </>
   );
