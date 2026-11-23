@@ -2,6 +2,35 @@
 [
   {
     "id": 1,
+    "name": "Fixora — Repair Marketplace",
+    "description": "A full-stack repair marketplace connecting customers with approved local technicians. Customers can discover repair services, request a job, follow every step of the repair, and pay only after the work is completed.",
+    "features": [
+      "Discover, search, and filter repair services by category, service mode, and location with server-side pagination.",
+      "Let technicians create, edit, and manage their services with an admin approval workflow and availability controls.",
+      "Track repair requests through a strictly enforced pipeline from requested to accepted, in-progress, and completed, with a full status timeline.",
+      "Provide role-aware dashboards for customers, technicians, and admins with stats, charts, and management tools.",
+      "Enable Stripe checkout and verified webhooks so payment is possible only for completed jobs, with payment history for customers and admins.",
+      "Support ratings and reviews for completed jobs, email and Google authentication, and responsive light and dark themes."
+    ],
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Express.js",
+      "MongoDB",
+      "Better Auth",
+      "JWT",
+      "Stripe",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "ImgBB API"
+    ],
+    "image": "/projects-img/fixora.png",
+    "liveUrl": "https://fixora-v1.vercel.app/",
+    "githubUrl": "https://github.com/asm-saim/fixora-client"
+  },
+  {
+    "id": 2,
     "name": "HireLoop — Job Hunting Platform",
     "description": "A full-stack recruitment platform connecting job seekers, recruiters, and administrators through a centralized hiring experience. Users can discover jobs, manage applications, track recruitment progress, and handle subscription plans.",
     "features": [
@@ -28,7 +57,7 @@
     "githubUrl": "https://github.com/asm-saim/hireloop-client"
   },
   {
-    "id": 2,
+    "id": 3,
     "name": "StudioSpace — Creative Studio Marketplace",
     "description": "A full-stack marketplace connecting creative professionals with studio owners. Users can discover photography studios, podcast rooms, music recording spaces, and other creative workspaces, manage listings, and book studios through an integrated reservation system.",
     "features": [
@@ -57,7 +86,7 @@
     "githubUrl": "https://github.com/asm-saim/studio-space-client"
   },
   {
-    "id": 3,
+    "id": 4,
     "name": "BazarDor — বাজার দর",
     "description": "A responsive Bangla market-price tracking application that helps users explore daily prices of essential products and compare prices across local markets.",
     "features": [
@@ -77,7 +106,7 @@
     "githubUrl": "https://github.com/asm-saim/bazar-dor"
   },
   {
-    "id": 4,
+    "id": 5,
     "name": "FitLog — Workout Library",
     "description": "A responsive workout library built with Next.js and TypeScript that helps users explore exercises, build daily workout plans, save workouts, and track completed exercises.",
     "features": [
@@ -97,7 +126,7 @@
     "githubUrl": "https://github.com/asm-saim/fit-log"
   },
   {
-    "id": 5,
+    "id": 6,
     "name": "Simplico",
     "description": "A modern and responsive React application that showcases popular mobile applications in an App Store-style interface.",
     "features": [
@@ -117,7 +146,7 @@
     "githubUrl": "https://github.com/asm-saim/simplico"
   },
   {
-    "id": 6,
+    "id": 7,
     "name": "Customer Support Zone",
     "description": "A responsive React application for managing customer support tickets through an interactive workflow.",
     "features": [
@@ -137,7 +166,7 @@
     "githubUrl": "https://github.com/asm-saim/customer-support-zone"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Champions League Dream Team",
     "description": "A responsive React application where users build their own dream cricket team by selecting players within a limited coin budget.",
     "features": [
@@ -157,7 +186,7 @@
     "githubUrl": "https://github.com/asm-saim/champions-league-twenty20"
   },
   {
-    "id": 8,
+    "id": 9,
     "name": "Green Earth",
     "description": "A responsive web application that allows users to explore plants, filter them by categories, and view detailed plant information through a modern API-driven interface.",
     "features": [
@@ -176,7 +205,7 @@
     "githubUrl": "https://github.com/asm-saim/green-earth"
   },
   {
-    "id": 9,
+    "id": 10,
     "name": "Emergency Service Directory",
     "description": "A responsive web application providing instant access to emergency hotline numbers, with one-click copy, mock call functionality, and live call history tracking.",
     "features": [
@@ -195,7 +224,7 @@
     "githubUrl": "https://github.com/asm-saim/emergency-services-portal"
   },
   {
-    "id": 10,
+    "id": 11,
     "name": "PAYOO — Smart MFS Interface",
     "description": "A smart Mobile Financial Services interface delivering a seamless digital banking experience for managing money transfers and transactions.",
     "features": [
