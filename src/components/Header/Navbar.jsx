@@ -12,24 +12,11 @@ const navItems = [
 ];
 
 const Navbar = () => {
-  // Each menu needs its own layoutId so the hidden mobile menu doesn't
-  // compete with the desktop one for the same shared-layout indicator.
-  const list = (indicatorId) => (
+  const list = (
     <>
       {navItems.map(({ to, label }) => (
         <NavLink key={to} to={to} className={({ isActive }) => (isActive ? "text-blue-400" : "")}>
-          {({ isActive }) => (
-            <li className="relative m-3 font-normal text-base">
-              {isActive && (
-                <motion.span
-                  layoutId={indicatorId}
-                  className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full bg-blue-400"
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                />
-              )}
-              {label}
-            </li>
-          )}
+          <li className="m-3 font-normal text-base">{label}</li>
         </NavLink>
       ))}
     </>
@@ -61,7 +48,7 @@ const Navbar = () => {
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100/90 backdrop-blur-md rounded-box z-1 mt-3 w-48 sm:w-52 p-2 shadow"
             >
-              {list("nav-indicator-mobile")}
+              {list}
             </ul>
           </div>
           <Link to="/" className="flex items-center space-x-1.5 cursor-pointer px-0">
@@ -70,7 +57,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{list("nav-indicator-desktop")}</ul>
+          <ul className="menu menu-horizontal px-1">{list}</ul>
         </div>
         <div className="navbar-end">
           <motion.a
