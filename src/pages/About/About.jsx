@@ -188,7 +188,7 @@ const About = () => {
                 src={aboutPhoto}
                 alt="Portrait of A S M Saim in graduation attire"
                 decoding="async"
-                className="aspect-[4/5] w-full object-cover object-center lg:aspect-auto lg:h-[clamp(20rem,46vh,30rem)]"
+                className="aspect-[4/5] w-full object-cover object-center lg:aspect-auto lg:h-[clamp(20rem,52vh,34rem)]"
               />
               <div
                 aria-hidden="true"
@@ -206,7 +206,7 @@ const About = () => {
               </span>
             </div>
 
-            <dl className="mt-4 grid grid-cols-2 gap-x-4 gap-y-5 rounded-xl border border-white/10 bg-white/[0.02] p-5 text-left">
+            <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left">
               <div>
                 <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">Based in</dt>
                 <dd className="mt-1 text-sm text-gray-200">Dhaka, Bangladesh</dd>
