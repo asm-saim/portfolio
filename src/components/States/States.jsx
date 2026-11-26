@@ -1,66 +1,30 @@
 import { motion } from "framer-motion";
+import projects from "../../projects-data/projects-data.json";
 import Reveal from "../Reveal/Reveal";
-import { fadeUp, hoverLift } from "../../motion/variants";
+import { fadeUp } from "../../motion/variants";
 
-const stats = [
-  {
-    value: "20+",
-    title: "Projects",
-    description: "Projects built",
-  },
-  {
-    value: "15+",
-    title: "Technologies",
-    description: "Tools and technologies",
-  },
-  {
-    value: "80+",
-    title: "GitHub Repos",
-    description: "Repositories",
-  },
-  {
-    value: "B.Sc.",
-    title: "CSE Graduate",
-    description: "Computer Science & Engineering",
-  },
+const facts = [
+  { value: String(projects.length), label: "Projects built" },
+  { value: "Feb 2024", label: "System Engineer · NOC" },
+  { value: "B.Sc.", label: "CSE · IIUC" },
+  { value: "Dhaka", label: "Bangladesh" },
 ];
 
 const Stats = () => {
   return (
-    <div className="bg-gradient-to-r from-transparent via-[#061A3A]/5 via-5% via-[#082B55]/20 via-70% to-[#0B2F5B]/60">
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
-        {/* Section Header */}
-        <Reveal variant={fadeUp} className="text-center mb-8">
-          <span className="block text-sm font-medium tracking-widest text-blue-400 uppercase mb-2">At a Glance</span>
-
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">A Few Highlights</h2>
-
-          <p className="mt-3 max-w-2xl mx-auto text-sm sm:text-base text-gray-400 leading-7">
-            A quick overview of my development journey, projects, and technical background.
-          </p>
-        </Reveal>
-
-        {/* Stats */}
-        <Reveal className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {stats.map((stat) => (
-            <motion.div
-              key={stat.title}
-              variants={fadeUp}
-              whileHover={hoverLift}
-              className="group rounded-xl border border-white/10 bg-gradient-to-br from-[#0B2F5B]/20 to-[#3B82F6]/10 p-5 sm:p-6 text-center transition-[border-color,box-shadow] duration-300 hover:border-blue-400/30 hover:shadow-[0_0_25px_rgba(59,130,246,0.15)]"
-            >
-              <h3 className="text-2xl sm:text-3xl font-bold text-blue-400 transition-colors duration-300 group-hover:text-blue-300">
-                {stat.value}
-              </h3>
-
-              <p className="mt-2 text-sm sm:text-base font-semibold text-white">{stat.title}</p>
-
-              <p className="mt-1 text-xs sm:text-sm text-gray-400">{stat.description}</p>
-            </motion.div>
-          ))}
-        </Reveal>
-      </section>
-    </div>
+    <section aria-label="Quick facts" className="border-y border-white/10 bg-white/[0.02]">
+      <Reveal
+        variant={fadeUp}
+        className="mx-auto grid max-w-6xl grid-cols-2 gap-y-6 px-4 py-6 sm:px-6 lg:grid-cols-4 lg:gap-y-0 lg:divide-x lg:divide-white/10 lg:py-8"
+      >
+        {facts.map(({ value, label }) => (
+          <motion.div key={label} variants={fadeUp} className="lg:px-8 lg:first:pl-0 lg:last:pr-0">
+            <p className="text-xl font-semibold tracking-tight text-white sm:text-2xl">{value}</p>
+            <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.14em] text-gray-500">{label}</p>
+          </motion.div>
+        ))}
+      </Reveal>
+    </section>
   );
 };
 

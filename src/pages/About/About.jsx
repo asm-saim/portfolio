@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 import PageMeta from "../../components/PageMeta/PageMeta";
+import ContactCTA from "../../components/ContactCTA/ContactCTA";
+import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import aboutPhoto from "../../assets/about-photo.jpeg";
 import { EASE, fadeUp, hoverLift, staggerContainer, tapScale } from "../../motion/variants";
 
@@ -62,16 +64,6 @@ const education = {
   end: { label: "2023", dateTime: "2023" },
   cgpa: "3.34 / 4.00",
 };
-
-const SectionHeading = ({ id, eyebrow, title, description }) => (
-  <div className="max-w-2xl">
-    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">{eyebrow}</p>
-    <h2 id={id} className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
-      {title}
-    </h2>
-    {description ? <p className="mt-3 text-sm leading-7 text-gray-400 sm:text-base">{description}</p> : null}
-  </div>
-);
 
 const About = () => {
   return (
@@ -414,72 +406,7 @@ const About = () => {
       </motion.section>
 
       {/* Closing CTA */}
-      <motion.section
-        aria-labelledby="contact-title"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
-        variants={fadeUp}
-        className="mx-auto max-w-6xl px-4 pb-20 pt-4 sm:px-6"
-      >
-        <div className="relative overflow-hidden rounded-2xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/50 via-[#0A1628] to-[#3B82F6]/10 p-6 sm:p-10">
-          <div
-            aria-hidden="true"
-            className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-blue-500/20 blur-3xl"
-          />
-
-          <div className="relative">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Let's work together</p>
-
-            <h2 id="contact-title" className="mt-3 max-w-2xl text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              Open to full-stack and software engineering roles.
-            </h2>
-
-            <p className="mt-3 max-w-xl text-sm leading-7 text-gray-400">
-              I'm based in Dhaka and open to on-site, hybrid, and remote opportunities. The fastest way to reach me is
-              email.
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <motion.a
-                href="mailto:saim777m@gmail.com?subject=Let's Connect"
-                whileHover={{ y: -2 }}
-                whileTap={tapScale}
-                transition={{ duration: 0.2, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] px-5 py-2.5 text-sm font-medium text-white transition-shadow duration-300 hover:shadow-[0_0_25px_rgba(59,130,246,0.5)]"
-              >
-                <FaEnvelope className="text-sm" />
-                Email me
-              </motion.a>
-
-              <motion.a
-                href="/resume.pdf"
-                download
-                whileHover={{ y: -2 }}
-                whileTap={tapScale}
-                transition={{ duration: 0.2, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-gray-200 transition-colors duration-300 hover:border-blue-400/50 hover:text-blue-300"
-              >
-                <FaDownload className="text-sm" />
-                Download CV
-              </motion.a>
-
-              <motion.a
-                href="https://www.linkedin.com/in/asmsaim/"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-                whileTap={tapScale}
-                transition={{ duration: 0.2, ease: EASE }}
-                className="inline-flex items-center gap-2 rounded-lg border border-white/10 px-4 py-2.5 text-sm font-medium text-gray-400 transition-colors duration-300 hover:border-white/25 hover:text-white"
-              >
-                <FaLinkedin />
-                LinkedIn
-              </motion.a>
-            </div>
-          </div>
-        </div>
-      </motion.section>
+      <ContactCTA className="mx-auto max-w-6xl px-4 pb-20 pt-4 sm:px-6" />
     </>
   );
 };
