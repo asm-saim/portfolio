@@ -19,7 +19,7 @@ const socialLinks = [
 
 const Banner = () => {
   return (
-    <section className="mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-6 lg:pb-20">
+    <section className="mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
       <motion.div
         initial="hidden"
         animate="visible"
@@ -101,15 +101,6 @@ const Banner = () => {
               </motion.a>
             ))}
           </motion.div>
-
-          <motion.p
-            variants={fadeUp}
-            className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-gray-500 lg:justify-start"
-          >
-            <span>Currently System Engineer (NOC) at Bangla Tel Group</span>
-            <span aria-hidden="true" className="hidden h-1 w-1 rounded-full bg-gray-700 sm:block" />
-            <span>B.Sc. CSE, IIUC</span>
-          </motion.p>
         </div>
 
         {/* Portrait */}
@@ -117,7 +108,7 @@ const Banner = () => {
           initial={{ opacity: 0, scale: 0.96, y: 16 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
-          className="relative mx-auto w-full max-w-[340px] sm:max-w-[380px] xl:max-w-[420px]"
+          className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px]"
         >
           <div
             aria-hidden="true"
@@ -130,37 +121,15 @@ const Banner = () => {
               className="absolute inset-0 bg-[radial-gradient(circle_at_50%_28%,rgba(59,130,246,0.35),transparent_62%)]"
             />
 
-            <div className="relative aspect-[4/5]">
+            <div className="relative aspect-[10/11]">
               <img
                 src={bannerImg}
                 alt="Portrait of A S M Saim"
                 fetchPriority="high"
                 decoding="async"
-                className="absolute bottom-0 left-1/2 w-[132%] max-w-none -translate-x-1/2 object-contain"
+                className="absolute bottom-0 left-0 w-full object-contain"
               />
-
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#060B16] to-transparent"
-              />
-
-              <div className="absolute inset-x-4 bottom-4 flex items-center justify-between gap-3">
-                <div>
-                  <p className="text-sm font-semibold text-white">A S M Saim</p>
-                  <p className="text-[11px] text-gray-400">Full-stack developer</p>
-                </div>
-                <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-2.5 py-1 text-[10px] font-medium text-emerald-300 backdrop-blur-md">
-                  Dhaka, BD
-                </span>
-              </div>
             </div>
-          </div>
-
-          <div className="absolute -left-3 top-10 hidden rounded-xl border border-white/10 bg-[#0A0F1E]/90 px-3 py-2 text-[11px] font-medium text-gray-300 shadow-lg backdrop-blur-md sm:block">
-            React · Next.js
-          </div>
-          <div className="absolute -right-3 bottom-24 hidden rounded-xl border border-white/10 bg-[#0A0F1E]/90 px-3 py-2 text-[11px] font-medium text-gray-300 shadow-lg backdrop-blur-md sm:block">
-            Node · MongoDB
           </div>
         </motion.div>
       </motion.div>
