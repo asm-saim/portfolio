@@ -85,7 +85,7 @@ const About = () => {
       <section
         id="about"
         aria-labelledby="about-title"
-        className="relative mx-auto max-w-6xl px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20"
+        className="relative mx-auto max-w-6xl px-4 pt-28 pb-16 sm:px-6 sm:pt-32 sm:pb-20 lg:pt-28 lg:pb-12"
       >
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
           {/* Copy */}
@@ -188,7 +188,7 @@ const About = () => {
                 src={aboutPhoto}
                 alt="Portrait of A S M Saim in graduation attire"
                 decoding="async"
-                className="aspect-[4/5] w-full object-cover object-center"
+                className="aspect-[4/5] w-full object-cover object-center lg:aspect-auto lg:h-[clamp(20rem,46vh,30rem)]"
               />
               <div
                 aria-hidden="true"
