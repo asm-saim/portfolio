@@ -21,7 +21,7 @@ const Banner = () => {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
+    <section className="relative isolate mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <motion.div
           animate={reduceMotion ? undefined : { opacity: [0.4, 0.75, 0.4], x: [0, 14, 0] }}

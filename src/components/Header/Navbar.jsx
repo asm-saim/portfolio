@@ -35,7 +35,7 @@ const Navbar = () => {
       transition={{ duration: 0.4, ease: EASE }}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-base-100/90 border-b border-white/7"
     >
-      <div className="navbar max-w-6xl min-h-0 h-[64px] mx-auto px-4 sm:px-6 lg:px-0">
+      <div className="navbar max-w-6xl min-h-0 h-[60px] mx-auto px-4 sm:px-6 lg:px-0">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-sm btn-square lg:hidden">
@@ -57,7 +57,7 @@ const Navbar = () => {
               {renderNavItems()}
             </ul>
           </div>
-          <Link to="/" className="flex items-center gap-1.5 cursor-pointer px-0">
+          <Link to="/" className="flex items-center gap-0.5 cursor-pointer px-0">
             <img src={logo} className="w-7 sm:w-8" alt="portfolio logo" />
             <span className="text-base sm:text-2xl font-medium ">aim</span>
           </Link>
