@@ -22,19 +22,6 @@ const Banner = () => {
 
   return (
     <section className="relative isolate mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        <motion.div
-          animate={reduceMotion ? undefined : { opacity: [0.4, 0.75, 0.4], x: [0, 14, 0] }}
-          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -left-24 top-8 h-72 w-72 rounded-full bg-blue-500/20 blur-[100px]"
-        />
-        <motion.div
-          animate={reduceMotion ? undefined : { opacity: [0.3, 0.6, 0.3], y: [0, -12, 0] }}
-          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
-          className="absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-[110px]"
-        />
-      </div>
-
       <motion.div
         initial="hidden"
         animate="visible"
@@ -58,17 +45,19 @@ const Banner = () => {
 
           <motion.h1
             variants={fadeUp}
-            className="mt-6 text-balance text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl xl:text-6xl"
+            className="mt-6 text-balance text-3xl font-bold leading-[1.08] tracking-tight text-white sm:text-[2.25rem] xl:text-[2.5rem]"
           >
-            I build fast, accessible{" "}
+            I build fast, accessible
+            <br className="hidden lg:block" />{" "}
             <span className="text-blue-400">
               <span className="whitespace-nowrap">full-stack</span> web apps.
             </span>
           </motion.h1>
 
           <motion.p variants={fadeUp} className="mt-6 max-w-xl text-pretty text-sm leading-7 text-gray-300 sm:text-base">
-            I'm <span className="font-medium text-white">A S M Saim</span>, a full-stack developer in Dhaka, Bangladesh.
-            I take products from interface to API to deployment with React, Next.js, Node.js, and MongoDB.
+            I'm <span className="font-bold text-white">A S M Saim</span>, a full-stack developer in Dhaka, Bangladesh. I
+            take products from interface to API to deployment, building reliable apps with React, Next.js, TypeScript,
+            Node.js, and MongoDB.
           </motion.p>
 
           <motion.div
