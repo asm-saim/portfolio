@@ -21,7 +21,7 @@ const Banner = () => {
   const reduceMotion = useReducedMotion();
 
   return (
-    <section className="relative isolate mx-auto flex min-h-[calc(100svh-3.75rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
+    <section className="relative isolate mx-auto flex min-h-[calc(100svh-4rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <motion.div
           animate={reduceMotion ? undefined : { opacity: [0.4, 0.75, 0.4], x: [0, 14, 0] }}
@@ -123,11 +123,6 @@ const Banner = () => {
           variants={fadeInRight}
           className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px]"
         >
-          <div
-            aria-hidden="true"
-            className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-br from-blue-500/25 via-cyan-400/10 to-transparent blur-2xl"
-          />
-
           <div className="relative overflow-hidden rounded-3xl bg-gradient-to-b from-[#0B2F5B]/60 via-[#0A1628] to-[#060B16] shadow-2xl shadow-blue-950/40">
             <div
               aria-hidden="true"
