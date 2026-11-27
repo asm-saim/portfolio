@@ -26,14 +26,14 @@ const Navbar = () => {
         }
       >
         {({ isActive }) => (
-          <li className="relative m-3 font-normal text-base">
+          <li className="relative m-2 font-normal text-sm">
             {label}
             {isActive ? (
               <motion.span
                 aria-hidden="true"
                 layoutId={`nav-underline-${group}`}
                 transition={{ type: "spring", stiffness: 420, damping: 34 }}
-                className="absolute -bottom-1 left-0 h-px! w-full rounded-full bg-blue-400 p-0! shadow-[0_0_8px_rgba(59,130,246,0.7)]"
+                className="absolute -bottom-0.5 left-0 h-px! w-full rounded-full bg-blue-400 p-0! shadow-[0_0_8px_rgba(59,130,246,0.7)]"
               />
             ) : null}
           </li>
@@ -48,13 +48,13 @@ const Navbar = () => {
       transition={{ duration: 0.4, ease: EASE }}
       className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-base-100/90 border-b border-white/7"
     >
-      <div className="navbar max-w-6xl min-h-0 h-[68px] mx-auto px-4 sm:px-6 lg:px-0">
+      <div className="navbar max-w-6xl min-h-0 h-[60px] mx-auto px-4 sm:px-6 lg:px-0">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <div tabIndex={0} role="button" className="btn btn-ghost btn-sm btn-square lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-[18px] w-[18px]"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -65,14 +65,14 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex="-1"
-              className="menu menu-sm dropdown-content bg-base-100/90 backdrop-blur-md rounded-box z-1 mt-3 w-48 sm:w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100/90 backdrop-blur-md rounded-box z-1 mt-2 w-44 sm:w-48 p-1.5 shadow"
             >
               {renderNavItems("mobile")}
             </ul>
           </div>
-          <Link to="/" className="flex items-center space-x-1.5 cursor-pointer px-0">
-            <img src={logo} className="w-7 sm:w-8 mr-0.5" alt="portfolio logo" />
-            <span className="text-lg sm:text-3xl font-medium ">aim</span>
+          <Link to="/" className="flex items-center gap-1.5 cursor-pointer px-0">
+            <img src={logo} className="w-6 sm:w-7" alt="portfolio logo" />
+            <span className="text-base sm:text-xl font-medium ">aim</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -84,7 +84,7 @@ const Navbar = () => {
             aria-label="Send me an email"
             whileHover={{ y: -2 }}
             whileTap={tapScale}
-            className="btn btn-sm sm:btn-md border-none text-sm sm:text-base rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-shadow duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
+            className="btn btn-sm border-none text-sm rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-shadow duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400"
           >
             <IoMail />
             <span className="hidden sm:inline font-medium">Get In Touch</span>
