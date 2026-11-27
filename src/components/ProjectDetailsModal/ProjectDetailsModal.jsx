@@ -2,6 +2,7 @@ import { useLayoutEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { EASE } from "../../motion/variants";
+import { freezeScroll } from "../../motion/scroll";
 
 const ProjectDetailsModal = ({ project, onClose }) => {
   const dialogRef = useRef(null);
@@ -10,12 +11,52 @@ const ProjectDetailsModal = ({ project, onClose }) => {
   useLayoutEffect(() => {
     const dialog = dialogRef.current;
     if (!dialog.open) dialog.showModal();
+    freezeScroll();
 
-    const previousOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    // A native `dialog` blocks interaction but not page scrolling, and Lenis
+    // drives wheel scrolling. Swallow scroll input aimed at the page while the
+    // modal owns the viewport; the modal box keeps scrolling natively through
+    // `data-lenis-prevent`. Locking with `overflow` would remove the scrollbar
+    // and shift the layout.
+    const isInsideScroller = (target) =>
+      target instanceof Element && Boolean(target.closest("[data-lenis-prevent]"));
+
+    const blockWheel = (event) => {
+      // Keep browser zoom (ctrl + wheel) working.
+      if (event.ctrlKey || isInsideScroller(event.target)) return;
+      event.preventDefault();
+      event.stopPropagation();
+    };
+
+    const blockTouch = (event) => {
+      // Keep pinch zoom working.
+      if (event.touches.length > 1 || isInsideScroller(event.target)) return;
+      event.preventDefault();
+    };
+
+    const scrollKeys = new Set([
+      " ",
+      "PageUp",
+      "PageDown",
+      "Home",
+      "End",
+      "ArrowUp",
+      "ArrowDown",
+    ]);
+
+    const blockKeys = (event) => {
+      if (!scrollKeys.has(event.key) || isInsideScroller(event.target)) return;
+      event.preventDefault();
+    };
+
+    document.addEventListener("wheel", blockWheel, { capture: true, passive: false });
+    document.addEventListener("touchmove", blockTouch, { capture: true, passive: false });
+    document.addEventListener("keydown", blockKeys);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("wheel", blockWheel, { capture: true });
+      document.removeEventListener("touchmove", blockTouch, { capture: true });
+      document.removeEventListener("keydown", blockKeys);
       // Removing the dialog from the DOM closes it; calling close() here would
       // hide it before AnimatePresence can finish the exit animation.
     };
@@ -42,7 +83,10 @@ const ProjectDetailsModal = ({ project, onClose }) => {
       onClick={handleBackdropClick}
       aria-labelledby="project-details-title"
     >
-      <div className="modal-box max-w-3xl max-h-[90vh] overflow-y-auto p-0 bg-[#0A0F1E] border border-blue-500/40">
+      <div
+        className="modal-box max-w-3xl max-h-[90vh] overflow-y-auto overscroll-contain p-0 bg-[#0A0F1E] border border-blue-500/40"
+        data-lenis-prevent
+      >
         <div className="relative">
           <img
             src={image}

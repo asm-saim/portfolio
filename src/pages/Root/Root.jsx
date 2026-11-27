@@ -2,8 +2,10 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLocation, useNavigation, useOutlet } from "react-router";
 import Navbar from "../../components/Header/Navbar";
 import Footer from "../../components/Footer/Footer";
+import SmoothScroll from "../../components/SmoothScroll/SmoothScroll";
 import { ColorRing } from "react-loader-spinner";
 import { EASE } from "../../motion/variants";
+import { scrollToTop } from "../../motion/scroll";
 
 const Root = () => {
   const navigation = useNavigation();
@@ -13,6 +15,7 @@ const Root = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SmoothScroll />
       <Navbar></Navbar>
       <div className="flex-1">
         {navigation.state === "loading" ? (
@@ -28,7 +31,7 @@ const Root = () => {
             />
           </div>
         ) : (
-          <AnimatePresence mode="wait" initial={false}>
+          <AnimatePresence mode="wait" initial={false} onExitComplete={scrollToTop}>
             <motion.div
               key={location.pathname}
               initial={{ opacity: 0, y: 8 }}

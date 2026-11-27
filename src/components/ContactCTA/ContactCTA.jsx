@@ -11,8 +11,11 @@ const ContactCTA = ({ className = "mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20
     variants={fadeUp}
     className={className}
   >
-    <div className="relative overflow-hidden rounded-2xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/50 via-[#0A1628] to-[#3B82F6]/10 p-6 sm:p-10">
-      <div aria-hidden="true" className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-blue-500/20 blur-3xl" />
+    <div className="group relative overflow-hidden rounded-2xl border border-blue-400/20 bg-gradient-to-br from-[#0B2F5B]/50 via-[#0A1628] to-[#3B82F6]/10 p-6 transition-colors duration-500 hover:border-blue-400/40 sm:p-10">
+      <div
+        aria-hidden="true"
+        className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-blue-500/20 opacity-70 blur-3xl transition-opacity duration-500 group-hover:opacity-100"
+      />
 
       <div className="relative">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">Let's work together</p>

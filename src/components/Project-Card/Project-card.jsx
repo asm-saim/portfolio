@@ -6,13 +6,13 @@ const ProjectCard = ({ project, onOpen }) => {
   const remainingTech = technologies.length - visibleTech.length;
 
   return (
-    <article className="group relative h-full rounded-xl border border-blue-500/40 bg-[#0A0F1E] overflow-hidden flex flex-col transition-[border-color,box-shadow] duration-300 hover:border-blue-400 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-blue-500/40 bg-[#0A0F1E] transition-[border-color,box-shadow] duration-300 hover:border-blue-400 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)] focus-within:border-blue-400 focus-within:shadow-[0_0_30px_rgba(59,130,246,0.25)]">
       {/* Project image */}
       <div className="relative overflow-hidden">
         <img
           src={image}
           alt={name}
-          className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          className="aspect-video w-full object-cover object-top transition-transform duration-500 group-hover:scale-105 group-focus-within:scale-105"
           loading="lazy"
         />
       </div>
@@ -43,7 +43,7 @@ const ProjectCard = ({ project, onOpen }) => {
             href={liveUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-xs sm:btn-sm border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)]"
+            className="btn btn-xs sm:btn-sm border-none rounded-lg bg-gradient-to-br from-[#0B2F5B] to-[#3B82F6] transition-all duration-300 ease-out hover:shadow-[0_0_30px_rgba(59,130,246,0.8)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
           >
             <FaExternalLinkAlt className="text-xs" />
             Live Site
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, onOpen }) => {
             href={githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn-xs sm:btn-sm rounded-lg border border-gray-600 text-gray-300 bg-transparent transition-all duration-300 ease-out hover:border-blue-400 hover:text-blue-400"
+            className="btn btn-xs sm:btn-sm rounded-lg border border-gray-600 text-gray-300 bg-transparent transition-all duration-300 ease-out hover:border-blue-400 hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0A0F1E]"
           >
             <FaGithub className="text-sm" />
             Code

@@ -7,12 +7,21 @@ import {
   FaRocket,
   FaServer,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import PageMeta from "../../components/PageMeta/PageMeta";
 import ContactCTA from "../../components/ContactCTA/ContactCTA";
 import SectionHeading from "../../components/SectionHeading/SectionHeading";
 import aboutPhoto from "../../assets/about-photo.jpeg";
-import { EASE, fadeUp, hoverLift, staggerContainer, tapScale } from "../../motion/variants";
+import {
+  EASE,
+  dotPop,
+  fadeInRight,
+  fadeUp,
+  hoverLift,
+  staggerContainer,
+  tapScale,
+  timelineLine,
+} from "../../motion/variants";
 
 const focusAreas = [
   {
@@ -56,6 +65,13 @@ const toolbox = [
   { label: "Tools & delivery", items: ["Git", "GitHub", "Docker", "Vercel", "Postman"] },
 ];
 
+const quickFacts = [
+  { term: "Based in", value: "Dhaka, Bangladesh" },
+  { term: "Current role", value: "System Engineer · NOC" },
+  { term: "Education", value: "B.Sc. CSE, IIUC" },
+  { term: "Focus", value: "Full-stack web apps" },
+];
+
 const education = {
   degree: "B.Sc. in Computer Science & Engineering",
   institute: "International Islamic University Chittagong (IIUC)",
@@ -66,6 +82,8 @@ const education = {
 };
 
 const About = () => {
+  const reduceMotion = useReducedMotion();
+
   return (
     <>
       <PageMeta
@@ -165,57 +183,54 @@ const About = () => {
 
           {/* Portrait + quick facts */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.96, y: 16 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: EASE }}
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
             className="relative mx-auto w-full max-w-md"
           >
-            <div
-              aria-hidden="true"
-              className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-transparent blur-2xl"
-            />
-
-            <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-2xl shadow-blue-950/40">
-              <img
-                src={aboutPhoto}
-                alt="Portrait of A S M Saim in graduation attire"
-                decoding="async"
-                className="aspect-[4/5] w-full object-cover object-center lg:aspect-auto lg:h-[clamp(20rem,52vh,34rem)]"
-              />
+            <motion.div variants={fadeInRight} className="relative">
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060B16]/85 via-transparent to-transparent"
+                className="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-blue-500/20 via-cyan-400/10 to-transparent blur-2xl"
               />
 
-              <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300 backdrop-blur-md">
-                <motion.span
-                  aria-hidden="true"
-                  animate={{ opacity: [1, 0.35, 1] }}
-                  transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
-                  className="h-1.5 w-1.5 rounded-full bg-emerald-400"
+              <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] shadow-2xl shadow-blue-950/40">
+                <motion.img
+                  src={aboutPhoto}
+                  alt="Portrait of A S M Saim in graduation attire"
+                  decoding="async"
+                  whileHover={reduceMotion ? undefined : { scale: 1.03 }}
+                  transition={{ duration: 0.6, ease: EASE }}
+                  className="aspect-[4/5] w-full object-cover object-center lg:aspect-auto lg:h-[clamp(20rem,52vh,34rem)]"
                 />
-                Open to opportunities
-              </span>
-            </div>
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#060B16]/85 via-transparent to-transparent"
+                />
 
-            <dl className="mt-3 grid grid-cols-2 gap-x-4 gap-y-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left">
-              <div>
-                <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">Based in</dt>
-                <dd className="mt-1 text-sm text-gray-200">Dhaka, Bangladesh</dd>
+                <span className="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300 backdrop-blur-md">
+                  <motion.span
+                    aria-hidden="true"
+                    animate={reduceMotion ? undefined : { opacity: [1, 0.35, 1] }}
+                    transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
+                    className="h-1.5 w-1.5 rounded-full bg-emerald-400"
+                  />
+                  Open to opportunities
+                </span>
               </div>
-              <div>
-                <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">Current role</dt>
-                <dd className="mt-1 text-sm text-gray-200">System Engineer · NOC</dd>
-              </div>
-              <div>
-                <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">Education</dt>
-                <dd className="mt-1 text-sm text-gray-200">B.Sc. CSE, IIUC</dd>
-              </div>
-              <div>
-                <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">Focus</dt>
-                <dd className="mt-1 text-sm text-gray-200">Full-stack web apps</dd>
-              </div>
-            </dl>
+            </motion.div>
+
+            <motion.dl
+              variants={staggerContainer}
+              className="mt-3 grid grid-cols-2 gap-x-4 gap-y-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 text-left"
+            >
+              {quickFacts.map(({ term, value }) => (
+                <motion.div key={term} variants={fadeUp}>
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-gray-500">{term}</dt>
+                  <dd className="mt-1 text-sm text-gray-200">{value}</dd>
+                </motion.div>
+              ))}
+            </motion.dl>
           </motion.div>
         </div>
       </section>
@@ -269,11 +284,18 @@ const About = () => {
           <SectionHeading id="experience-title" eyebrow="Experience" title="Where I've worked" />
         </motion.div>
 
-        <div className="mt-8 border-l border-white/10 pl-6 sm:pl-8">
+        <div className="relative mt-8 pl-6 sm:pl-8">
+          <motion.span
+            aria-hidden="true"
+            variants={timelineLine}
+            className="absolute left-0 top-0 h-full w-px origin-top bg-gradient-to-b from-blue-400/60 via-white/10 to-transparent"
+          />
+
           {experience.map(({ role, company, location, start, current, bullets }) => (
             <motion.article key={role} variants={fadeUp} className="relative">
-              <span
+              <motion.span
                 aria-hidden="true"
+                variants={dotPop}
                 className="absolute -left-[30px] top-1.5 h-3 w-3 rounded-full border-2 border-blue-400 bg-[#0A0F1E] shadow-[0_0_12px_rgba(59,130,246,0.6)] sm:-left-[38px]"
               />
 
@@ -332,7 +354,7 @@ const About = () => {
             <motion.div
               key={label}
               variants={fadeUp}
-              className="rounded-xl border border-white/10 bg-white/[0.02] p-5"
+              className="rounded-xl border border-white/10 bg-white/[0.02] p-5 transition-[border-color,box-shadow] duration-300 hover:border-blue-400/30 hover:shadow-[0_0_25px_rgba(59,130,246,0.12)]"
             >
               <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-blue-400">{label}</h3>
               <ul className="mt-4 space-y-2">

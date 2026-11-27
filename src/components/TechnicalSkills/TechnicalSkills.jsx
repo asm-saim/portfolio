@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Reveal from "../Reveal/Reveal";
 import SectionHeading from "../SectionHeading/SectionHeading";
-import { fadeUp } from "../../motion/variants";
+import { EASE, chipIn, fadeUp, staggerContainer } from "../../motion/variants";
 
 const stack = [
   { label: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
@@ -35,16 +35,19 @@ const TechnicalSkills = () => {
                   {label}
                 </span>
 
-                <ul className="flex flex-wrap gap-2">
+                <motion.ul variants={staggerContainer} className="flex flex-wrap gap-2">
                   {items.map((item) => (
-                    <li
+                    <motion.li
                       key={item}
-                      className="rounded-md border border-white/10 bg-white/[0.02] px-2.5 py-1 text-xs text-gray-300"
+                      variants={chipIn}
+                      whileHover={{ y: -2 }}
+                      transition={{ duration: 0.2, ease: EASE }}
+                      className="rounded-md border border-white/10 bg-white/[0.02] px-2.5 py-1 text-xs text-gray-300 transition-colors duration-300 hover:border-blue-400/40 hover:text-blue-200 hover:shadow-[0_0_18px_rgba(59,130,246,0.2)]"
                     >
                       {item}
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </div>
             </motion.div>
           ))}

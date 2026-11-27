@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Link } from "react-router";
 import { FaArrowRight, FaDownload, FaGithub, FaLinkedin } from "react-icons/fa";
 import bannerImg from "../../assets/banner.png";
-import { EASE, fadeUp, staggerContainer, tapScale } from "../../motion/variants";
+import { EASE, fadeInRight, fadeUp, staggerContainer, tapScale } from "../../motion/variants";
 
 const socialLinks = [
   {
@@ -18,13 +18,28 @@ const socialLinks = [
 ];
 
 const Banner = () => {
+  const reduceMotion = useReducedMotion();
+
   return (
-    <section className="mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl items-center px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
+    <section className="relative isolate mx-auto flex min-h-[calc(100svh-4.25rem)] max-w-6xl items-center overflow-hidden px-4 pb-16 pt-24 sm:px-6 lg:pb-16">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <motion.div
+          animate={reduceMotion ? undefined : { opacity: [0.4, 0.75, 0.4], x: [0, 14, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -left-24 top-8 h-72 w-72 rounded-full bg-blue-500/20 blur-[100px]"
+        />
+        <motion.div
+          animate={reduceMotion ? undefined : { opacity: [0.3, 0.6, 0.3], y: [0, -12, 0] }}
+          transition={{ duration: 14, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
+          className="absolute -right-16 bottom-0 h-80 w-80 rounded-full bg-cyan-400/10 blur-[110px]"
+        />
+      </div>
+
       <motion.div
         initial="hidden"
         animate="visible"
         variants={staggerContainer}
-        className="grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
+        className="relative z-10 grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14"
       >
         {/* Copy */}
         <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
@@ -34,7 +49,7 @@ const Banner = () => {
           >
             <motion.span
               aria-hidden="true"
-              animate={{ opacity: [1, 0.35, 1] }}
+              animate={reduceMotion ? undefined : { opacity: [1, 0.35, 1] }}
               transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}
               className="h-1.5 w-1.5 rounded-full bg-emerald-400"
             />
@@ -105,9 +120,7 @@ const Banner = () => {
 
         {/* Portrait */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 16 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+          variants={fadeInRight}
           className="relative mx-auto w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px] xl:max-w-[480px]"
         >
           <div

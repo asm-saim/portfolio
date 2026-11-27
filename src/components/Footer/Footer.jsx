@@ -14,7 +14,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           whileHover={{ y: -2, scale: 1.05 }}
           whileTap={tapScale}
-          className="transition-colors duration-300 hover:text-blue-400"
+          className="rounded-full transition-colors duration-300 hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2F5B]"
           aria-label="GitHub"
         >
           <BsGithub className="w-6 h-6 sm:w-7 sm:h-7" />
@@ -26,7 +26,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           whileHover={{ y: -2, scale: 1.05 }}
           whileTap={tapScale}
-          className="transition-colors duration-300 hover:text-blue-400"
+          className="rounded-full transition-colors duration-300 hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2F5B]"
           aria-label="LinkedIn"
         >
           <TiSocialLinkedinCircular className="w-8 h-8 sm:w-9 sm:h-9" />
@@ -36,7 +36,7 @@ const Footer = () => {
           href="mailto:saim777m@gmail.com"
           whileHover={{ y: -2, scale: 1.05 }}
           whileTap={tapScale}
-          className="transition-colors duration-300 hover:text-blue-400"
+          className="rounded-full transition-colors duration-300 hover:text-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B2F5B]"
           aria-label="Email"
         >
           <ImMail4 className="w-6 h-6 sm:w-7 sm:h-7" />
